@@ -8,8 +8,9 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
 /**
- * @author Administrator
  * 
+ * @author chenhao
+ *
  */
 public class SessionManager {
 	// 只有静态变量才能做为单例模式

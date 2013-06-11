@@ -2,6 +2,13 @@ package com.sickle.dao;
 
 import org.hibernate.Session;
 
+/**
+ * dao service都要继承此类
+ * 
+ * @author chenhao
+ *
+ * @param <T>
+ */
 public class HibernateSupport<T>{
 	
 	public T save(T t){
