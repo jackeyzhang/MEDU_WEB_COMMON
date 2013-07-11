@@ -4,6 +4,7 @@
 	<classpathentry kind="src" path="common"/>
 	<classpathentry kind="src" path="education"/>
 	<classpathentry kind="src" path="word"/>
+	<classpathentry kind="src" path="domain"/>
 	<classpathentry kind="lib" path="lib/antlr-2.7.6.jar"/>
 	<classpathentry kind="lib" path="lib/cglib-2.2.jar"/>
 	<classpathentry kind="lib" path="lib/commons-collections-3.1.jar"/>
