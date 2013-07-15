@@ -1,7 +1,7 @@
 /**
  * 
  */
-package bean.word;
+package com.sickle.pojo.word;
 
 import java.io.Serializable;
 import java.util.ArrayList;

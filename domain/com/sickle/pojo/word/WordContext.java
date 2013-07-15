@@ -1,4 +1,4 @@
-package context;
+package com.sickle.pojo.word;
 
 /**
  * 汉字上下文

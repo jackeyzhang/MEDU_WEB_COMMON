@@ -1,7 +1,7 @@
 /**
  * 
  */
-package data;
+package com.sickle.pojo.word;
 
 
 /**

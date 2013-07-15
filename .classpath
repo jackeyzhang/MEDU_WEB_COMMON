@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" path="business"/>
-	<classpathentry kind="src" path="common"/>
-	<classpathentry kind="src" path="education"/>
-	<classpathentry kind="src" path="word"/>
 	<classpathentry kind="src" path="domain"/>
 	<classpathentry kind="src" path="dao"/>
 	<classpathentry kind="lib" path="lib/antlr-2.7.6.jar"/>

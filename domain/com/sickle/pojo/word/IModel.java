@@ -1,22 +1,20 @@
 /**
  * 
  */
-package advert;
+package com.sickle.pojo.word;
 
 
 /**
- *  广告服务
+ * 数据model
  * 
  * @author zhangchenhao
  *
  *
  * 2013-5-27
- * 5:40:15
+ * 4:51:22
  *
  * TODO:
  */
-public interface AdvertService
-{
+public interface IModel{
 
-    //TODO
 }
