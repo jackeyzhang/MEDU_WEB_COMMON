@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2013-7-15 16:44:17 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sickle.pojo.website.WebUi" table="web_ui" catalog="medu">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <property name="title" type="string">
+            <column name="title" length="50" />
+        </property>
+        <property name="context" type="string">
+            <column name="context" length="5000" />
+        </property>
+        <property name="hint" type="string">
+            <column name="hint" length="500" />
+        </property>
+        <property name="alert" type="string">
+            <column name="alert" length="500" />
+        </property>
+    </class>
+</hibernate-mapping>

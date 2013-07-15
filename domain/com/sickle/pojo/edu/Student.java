@@ -1,260 +1,159 @@
-/**
- * 
- */
 package com.sickle.pojo.edu;
-
-import java.io.Serializable;
 import java.util.Date;
 
-
-/**
- * 学生信息
- * 
- * @author chenhao
- *
- */
-public class Student implements Serializable
+public class Student implements java.io.Serializable
 {
-
-	private static final long serialVersionUID = -334993948424696271L;
-
+	private static final long serialVersionUID = 3214724826217009615L;
 	private Integer id;
-	
-	//班级id
-	private Integer classId;
-	
-	//学生名字
+	private Classes classes;
 	private String name;
-	
-	//性别
 	private String sex;
-	
-	//生日
 	private Date birthday;
-	
-	//家庭住址
 	private String address;
-	
-	//联系方式
 	private String contact;
-	
-	//邮箱
 	private String email;
-	
-	//家长姓名
 	private String parent;
-	
-	//登陆名字 可根据规则生成：邮箱，编号等
 	private String loginName;
-	
-	//登陆密码 可根据规则生成
 	private String password;
 
-	
-	/**
-	 * 
-	 */
 	public Student( )
 	{
-		super( );
 	}
 
+	public Student( Classes classes, String name, String contact,
+			String loginName, String password )
+	{
+		this.classes = classes;
+		this.name = name;
+		this.contact = contact;
+		this.loginName = loginName;
+		this.password = password;
+	}
 
-	/**
-	 * @return the id
-	 */
+	public Student( Classes classes, String name, String sex, Date birthday,
+			String address, String contact, String email, String parent,
+			String loginName, String password )
+	{
+		this.classes = classes;
+		this.name = name;
+		this.sex = sex;
+		this.birthday = birthday;
+		this.address = address;
+		this.contact = contact;
+		this.email = email;
+		this.parent = parent;
+		this.loginName = loginName;
+		this.password = password;
+	}
+
 	public Integer getId( )
 	{
-		return id;
+		return this.id;
 	}
 
-	
-	/**
-	 * @param id the id to set
-	 */
 	public void setId( Integer id )
 	{
 		this.id = id;
 	}
 
-	
-	/**
-	 * @return the classId
-	 */
-	public Integer getClassId( )
+	public Classes getClasses( )
 	{
-		return classId;
+		return this.classes;
 	}
 
-	
-	/**
-	 * @param classId the classId to set
-	 */
-	public void setClassId( Integer classId )
+	public void setClasses( Classes classes )
 	{
-		this.classId = classId;
+		this.classes = classes;
 	}
 
-	
-	/**
-	 * @return the name
-	 */
 	public String getName( )
 	{
-		return name;
+		return this.name;
 	}
 
-	
-	/**
-	 * @param name the name to set
-	 */
 	public void setName( String name )
 	{
 		this.name = name;
 	}
 
-	
-	/**
-	 * @return the sex
-	 */
 	public String getSex( )
 	{
-		return sex;
+		return this.sex;
 	}
 
-	
-	/**
-	 * @param sex the sex to set
-	 */
 	public void setSex( String sex )
 	{
 		this.sex = sex;
 	}
 
-	
-	/**
-	 * @return the birthday
-	 */
 	public Date getBirthday( )
 	{
-		return birthday;
+		return this.birthday;
 	}
 
-	
-	/**
-	 * @param birthday the birthday to set
-	 */
 	public void setBirthday( Date birthday )
 	{
 		this.birthday = birthday;
 	}
 
-	
-	/**
-	 * @return the address
-	 */
 	public String getAddress( )
 	{
-		return address;
+		return this.address;
 	}
 
-	
-	/**
-	 * @param address the address to set
-	 */
 	public void setAddress( String address )
 	{
 		this.address = address;
 	}
 
-	
-	/**
-	 * @return the contact
-	 */
 	public String getContact( )
 	{
-		return contact;
+		return this.contact;
 	}
 
-	
-	/**
-	 * @param contact the contact to set
-	 */
 	public void setContact( String contact )
 	{
 		this.contact = contact;
 	}
 
-	
-	/**
-	 * @return the email
-	 */
 	public String getEmail( )
 	{
-		return email;
+		return this.email;
 	}
 
-	
-	/**
-	 * @param email the email to set
-	 */
 	public void setEmail( String email )
 	{
 		this.email = email;
 	}
 
-	
-	/**
-	 * @return the parent
-	 */
 	public String getParent( )
 	{
-		return parent;
+		return this.parent;
 	}
 
-	
-	/**
-	 * @param parent the parent to set
-	 */
 	public void setParent( String parent )
 	{
 		this.parent = parent;
 	}
 
-	
-	/**
-	 * @return the loginName
-	 */
 	public String getLoginName( )
 	{
-		return loginName;
+		return this.loginName;
 	}
 
-	
-	/**
-	 * @param loginName the loginName to set
-	 */
 	public void setLoginName( String loginName )
 	{
 		this.loginName = loginName;
 	}
 
-	
-	/**
-	 * @return the password
-	 */
 	public String getPassword( )
 	{
-		return password;
+		return this.password;
 	}
 
-	
-	/**
-	 * @param password the password to set
-	 */
 	public void setPassword( String password )
 	{
 		this.password = password;
 	}
-	
+
 }

@@ -2,6 +2,7 @@
 <classpath>
 	<classpathentry kind="src" path="domain"/>
 	<classpathentry kind="src" path="dao"/>
+	<classpathentry kind="src" path="service"/>
 	<classpathentry kind="lib" path="lib/antlr-2.7.6.jar"/>
 	<classpathentry kind="lib" path="lib/cglib-2.2.jar"/>
 	<classpathentry kind="lib" path="lib/commons-collections-3.1.jar"/>

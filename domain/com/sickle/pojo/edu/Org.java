@@ -1,177 +1,138 @@
-/**
- * 
- */
 package com.sickle.pojo.edu;
+import java.util.HashSet;
+import java.util.Set;
 
-import java.io.Serializable;
-
-
-/**
- * 公司信息
- * 
- * @author chenhao
- *
- */
-public class Org implements Serializable
+public class Org implements java.io.Serializable
 {
-
-	private static final long serialVersionUID = 1672304943726861087L;
-	
+	private static final long serialVersionUID = 2563453980930335917L;
 	private Integer id;
-	
-	//公司名称
 	private String name;
-	
-	//公司地址
 	private String address;
-	
-	//联系电话
 	private String telephone;
-
-	//联系人名称
 	private String manager;
-	
-	//登陆名
 	private String loginName;
-	
-	//登陆密码
-	private String loginPassword;
-	
-	
-	/**
-	 * 
-	 */
+	private String password;
+	private String orgcol;
+	private Set<School> schools = new HashSet<School>( 0 );
+
 	public Org( )
 	{
-		super( );
 	}
 
+	public Org( String name, String address, String telephone, String manager,
+			String loginName, String password, String orgcol )
+	{
+		this.name = name;
+		this.address = address;
+		this.telephone = telephone;
+		this.manager = manager;
+		this.loginName = loginName;
+		this.password = password;
+		this.orgcol = orgcol;
+	}
 
-	/**
-	 * @return the id
-	 */
+	public Org( String name, String address, String telephone, String manager,
+			String loginName, String password, String orgcol,
+			Set<School> schools )
+	{
+		this.name = name;
+		this.address = address;
+		this.telephone = telephone;
+		this.manager = manager;
+		this.loginName = loginName;
+		this.password = password;
+		this.orgcol = orgcol;
+		this.schools = schools;
+	}
+
 	public Integer getId( )
 	{
-		return id;
+		return this.id;
 	}
 
-	
-	/**
-	 * @param id the id to set
-	 */
 	public void setId( Integer id )
 	{
 		this.id = id;
 	}
 
-	
-	/**
-	 * @return the name
-	 */
 	public String getName( )
 	{
-		return name;
+		return this.name;
 	}
 
-	
-	/**
-	 * @param name the name to set
-	 */
 	public void setName( String name )
 	{
 		this.name = name;
 	}
 
-	
-	/**
-	 * @return the address
-	 */
 	public String getAddress( )
 	{
-		return address;
+		return this.address;
 	}
 
-	
-	/**
-	 * @param address the address to set
-	 */
 	public void setAddress( String address )
 	{
 		this.address = address;
 	}
 
-	
-	/**
-	 * @return the telephone
-	 */
 	public String getTelephone( )
 	{
-		return telephone;
+		return this.telephone;
 	}
 
-	
-	/**
-	 * @param telephone the telephone to set
-	 */
 	public void setTelephone( String telephone )
 	{
 		this.telephone = telephone;
 	}
 
-	
-	/**
-	 * @return the manager
-	 */
 	public String getManager( )
 	{
-		return manager;
+		return this.manager;
 	}
 
-	
-	/**
-	 * @param manager the manager to set
-	 */
 	public void setManager( String manager )
 	{
 		this.manager = manager;
 	}
 
-	
-	/**
-	 * @return the loginName
-	 */
 	public String getLoginName( )
 	{
-		return loginName;
+		return this.loginName;
 	}
 
-	
-	/**
-	 * @param loginName the loginName to set
-	 */
 	public void setLoginName( String loginName )
 	{
 		this.loginName = loginName;
 	}
 
-	
-	/**
-	 * @return the loginPassword
-	 */
-	public String getLoginPassword( )
+	public String getPassword( )
 	{
-		return loginPassword;
+		return this.password;
 	}
 
-	
-	/**
-	 * @param loginPassword the loginPassword to set
-	 */
-	public void setLoginPassword( String loginPassword )
+	public void setPassword( String password )
 	{
-		this.loginPassword = loginPassword;
+		this.password = password;
 	}
-	
-	
+
+	public String getOrgcol( )
+	{
+		return this.orgcol;
+	}
+
+	public void setOrgcol( String orgcol )
+	{
+		this.orgcol = orgcol;
+	}
+
+	public Set<School> getSchools( )
+	{
+		return this.schools;
+	}
+
+	public void setSchools( Set<School> schools )
+	{
+		this.schools = schools;
+	}
 
 }

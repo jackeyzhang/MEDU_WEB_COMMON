@@ -1,133 +1,97 @@
-/**
- * 
- */
 package com.sickle.pojo.edu;
 
-import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
 
-
-/**
- * 班级信息
- * 
- * @author chenhao
- *
- */
-public class Classes implements Serializable
+public class Classes implements java.io.Serializable
 {
 
-	private static final long serialVersionUID = -334993948424696271L;
-
-	//班级标示
+	private static final long serialVersionUID = 8836404241907066509L;
 	private Integer id;
-	
-	//学校标示
-	private Integer schoolId;
-	
-	//班级名称
+	private Teacher teacher;
+	private School school;
 	private String name;
-	
-	//现任代课老师
-	private Integer teacherId;
-	
-	//上课时间
-	private String classTime;
-	
-	/**
-	 * 
-	 */
+	private String classtime;
+	private Set<Student> students = new HashSet<Student>( 0 );
+
 	public Classes( )
 	{
-		super( );
 	}
 
-	/**
-	 * @return the id
-	 */
+	public Classes( Teacher teacher, School school )
+	{
+		this.teacher = teacher;
+		this.school = school;
+	}
+
+	public Classes( Teacher teacher, School school, String name,
+			String classtime, Set<Student> students )
+	{
+		this.teacher = teacher;
+		this.school = school;
+		this.name = name;
+		this.classtime = classtime;
+		this.students = students;
+	}
+
 	public Integer getId( )
 	{
-		return id;
+		return this.id;
 	}
 
-	
-	/**
-	 * @param id the id to set
-	 */
 	public void setId( Integer id )
 	{
 		this.id = id;
 	}
 
-	
-	/**
-	 * @return the schoolId
-	 */
-	public Integer getSchoolId( )
+	public Teacher getTeacher( )
 	{
-		return schoolId;
+		return this.teacher;
 	}
 
-	
-	/**
-	 * @param schoolId the schoolId to set
-	 */
-	public void setSchoolId( Integer schoolId )
+	public void setTeacher( Teacher teacher )
 	{
-		this.schoolId = schoolId;
+		this.teacher = teacher;
 	}
 
-	
-	/**
-	 * @return the name
-	 */
+	public School getSchool( )
+	{
+		return this.school;
+	}
+
+	public void setSchool( School school )
+	{
+		this.school = school;
+	}
+
 	public String getName( )
 	{
-		return name;
+		return this.name;
 	}
 
-	
-	/**
-	 * @param name the name to set
-	 */
 	public void setName( String name )
 	{
 		this.name = name;
 	}
 
-	
-	/**
-	 * @return the teacherId
-	 */
-	public Integer getTeacherId( )
+	public String getClasstime( )
 	{
-		return teacherId;
+		return this.classtime;
 	}
 
-	
-	/**
-	 * @param teacherId the teacherId to set
-	 */
-	public void setTeacherId( Integer teacherId )
+	public void setClasstime( String classtime )
 	{
-		this.teacherId = teacherId;
+		this.classtime = classtime;
 	}
 
-	
-	/**
-	 * @return the classTime
-	 */
-	public String getClassTime( )
+	public Set<Student> getStudents( )
 	{
-		return classTime;
+		return this.students;
 	}
 
-	
-	/**
-	 * @param classTime the classTime to set
-	 */
-	public void setClassTime( String classTime )
+	public void setStudents( Set<Student> students )
 	{
-		this.classTime = classTime;
+		this.students = students;
 	}
-	
-	
+
 }

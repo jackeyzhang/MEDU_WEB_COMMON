@@ -20,7 +20,7 @@ public class SessionManager {
 	static // 静态变量初始器，该初始器只会在类加载时执行一次
 	{
 		Configuration cfg = new Configuration();// 创建一个Configuration实例
-		cfg.configure("hibernate.cfg.xml");// 加载hibernate.cfg.xml文件
+		cfg.configure("com/sickle/dao/hibernate.cfg.xml");// 加载hibernate.cfg.xml文件
 		sessionFactory = cfg.buildSessionFactory();
 		threadLocal = new ThreadLocal<Session>();
 		sessionManager = new SessionManager();

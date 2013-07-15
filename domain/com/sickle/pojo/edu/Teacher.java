@@ -1,256 +1,170 @@
-/**
- * 
- */
 package com.sickle.pojo.edu;
+import java.util.HashSet;
+import java.util.Set;
 
-import java.io.Serializable;
-
-
-/**
- * 老师信息
- * 
- * @author chenhao
- *
- */
-public class Teacher implements Serializable
+public class Teacher implements java.io.Serializable
 {
-
-	private static final long serialVersionUID = -334993948424696271L;
-	
+	private static final long serialVersionUID = -6913802896040250403L;
 	private Integer id;
-	
 	private String name;
-	
 	private String sex;
-	
-	//喜好或专业描述或特长描述
 	private String hobby;
-	
-	//联系电话
 	private String contact;
-	
-	//邮箱
 	private String email;
-	
-	//工作年限
 	private Integer workage;
-	
-	//老师总评分 根据人气和支持度计算得出 实时更新
-	private float grade;
-	
-	// 个人信息公开度  所有人:1 	所教学生:2 	不开放:3
+	private Float grade;
 	private Integer openStatus;
-	
-	//登录名也就是昵称
 	private String loginName;
-	
-	//登录密码
 	private String password;
+	private Set<Classes> classeses = new HashSet<Classes>( 0 );
 
-	
-	/**
-	 * 
-	 */
 	public Teacher( )
 	{
-		super( );
 	}
 
+	public Teacher( String name, String email, String loginName, String password )
+	{
+		this.name = name;
+		this.email = email;
+		this.loginName = loginName;
+		this.password = password;
+	}
 
-	/**
-	 * @return the id
-	 */
+	public Teacher( String name, String sex, String hobby, String contact,
+			String email, Integer workage, Float grade, Integer openStatus,
+			String loginName, String password, Set<Classes> classeses )
+	{
+		this.name = name;
+		this.sex = sex;
+		this.hobby = hobby;
+		this.contact = contact;
+		this.email = email;
+		this.workage = workage;
+		this.grade = grade;
+		this.openStatus = openStatus;
+		this.loginName = loginName;
+		this.password = password;
+		this.classeses = classeses;
+	}
+
 	public Integer getId( )
 	{
-		return id;
+		return this.id;
 	}
 
-	
-	/**
-	 * @param id the id to set
-	 */
 	public void setId( Integer id )
 	{
 		this.id = id;
 	}
 
-	
-	/**
-	 * @return the name
-	 */
 	public String getName( )
 	{
-		return name;
+		return this.name;
 	}
 
-	
-	/**
-	 * @param name the name to set
-	 */
 	public void setName( String name )
 	{
 		this.name = name;
 	}
 
-	
-	/**
-	 * @return the sex
-	 */
 	public String getSex( )
 	{
-		return sex;
+		return this.sex;
 	}
 
-	
-	/**
-	 * @param sex the sex to set
-	 */
 	public void setSex( String sex )
 	{
 		this.sex = sex;
 	}
 
-	
-	/**
-	 * @return the hobby
-	 */
 	public String getHobby( )
 	{
-		return hobby;
+		return this.hobby;
 	}
 
-	
-	/**
-	 * @param hobby the hobby to set
-	 */
 	public void setHobby( String hobby )
 	{
 		this.hobby = hobby;
 	}
 
-	
-	/**
-	 * @return the contact
-	 */
 	public String getContact( )
 	{
-		return contact;
+		return this.contact;
 	}
 
-	
-	/**
-	 * @param contact the contact to set
-	 */
 	public void setContact( String contact )
 	{
 		this.contact = contact;
 	}
 
-	
-	/**
-	 * @return the email
-	 */
 	public String getEmail( )
 	{
-		return email;
+		return this.email;
 	}
 
-	
-	/**
-	 * @param email the email to set
-	 */
 	public void setEmail( String email )
 	{
 		this.email = email;
 	}
 
-	
-	/**
-	 * @return the workage
-	 */
 	public Integer getWorkage( )
 	{
-		return workage;
+		return this.workage;
 	}
 
-	
-	/**
-	 * @param workage the workage to set
-	 */
 	public void setWorkage( Integer workage )
 	{
 		this.workage = workage;
 	}
 
-	
-	/**
-	 * @return the grade
-	 */
-	public float getGrade( )
+	public Float getGrade( )
 	{
-		return grade;
+		return this.grade;
 	}
 
-	
-	/**
-	 * @param grade the grade to set
-	 */
-	public void setGrade( float grade )
+	public void setGrade( Float grade )
 	{
 		this.grade = grade;
 	}
 
-	
-	/**
-	 * @return the openStatus
-	 */
 	public Integer getOpenStatus( )
 	{
-		return openStatus;
+		return this.openStatus;
 	}
 
-	
-	/**
-	 * @param openStatus the openStatus to set
-	 */
 	public void setOpenStatus( Integer openStatus )
 	{
 		this.openStatus = openStatus;
 	}
 
-	
-	/**
-	 * @return the loginName
-	 */
 	public String getLoginName( )
 	{
-		return loginName;
+		return this.loginName;
 	}
 
-	
-	/**
-	 * @param loginName the loginName to set
-	 */
 	public void setLoginName( String loginName )
 	{
 		this.loginName = loginName;
 	}
 
-	
-	/**
-	 * @return the password
-	 */
 	public String getPassword( )
 	{
-		return password;
+		return this.password;
 	}
 
-	
-	/**
-	 * @param password the password to set
-	 */
 	public void setPassword( String password )
 	{
 		this.password = password;
 	}
+
+	public Set<Classes> getClasseses( )
+	{
+		return this.classeses;
+	}
+
+	public void setClasseses( Set<Classes> classeses )
+	{
+		this.classeses = classeses;
+	}
+
 }

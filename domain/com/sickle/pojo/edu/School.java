@@ -1,153 +1,107 @@
-/**
- * 
- */
 package com.sickle.pojo.edu;
+import java.util.HashSet;
+import java.util.Set;
 
-import java.io.Serializable;
-
-
-/**
- * 教学点信息
- * 
- * @author chenhao
- *
- */
-public class School implements Serializable
+public class School implements java.io.Serializable
 {
-
-	private static final long serialVersionUID = -334993948424696271L;
-	
+	private static final long serialVersionUID = -7356876508819459715L;
 	private Integer id;
-	
-	//学校名称
+	private Org org;
 	private String name;
-	
-	//所在城市
 	private String city;
-	
-	//机构名称
-	private Integer orgId;
-	
-	//学校登陆名称
-	private String loginName;
-	
-	//登陆密码
-	private String loginPassword;
+	private String loginname;
+	private String password;
+	private Set<Classes> classeses = new HashSet<Classes>( 0 );
 
-	/**
-	 * 
-	 */
 	public School( )
 	{
-		super( );
 	}
 
-	
-	/**
-	 * @return the id
-	 */
+	public School( String name, String loginname )
+	{
+		this.name = name;
+		this.loginname = loginname;
+	}
+
+	public School( Org org, String name, String city, String loginname,
+			String password, Set<Classes> classeses )
+	{
+		this.org = org;
+		this.name = name;
+		this.city = city;
+		this.loginname = loginname;
+		this.password = password;
+		this.classeses = classeses;
+	}
+
 	public Integer getId( )
 	{
-		return id;
+		return this.id;
 	}
 
-	
-	/**
-	 * @param id the id to set
-	 */
 	public void setId( Integer id )
 	{
 		this.id = id;
 	}
 
-	
-	/**
-	 * @return the name
-	 */
-	public String getName( )
+	public Org getOrg( )
 	{
-		return name;
+		return this.org;
 	}
 
-	
-	/**
-	 * @param name the name to set
-	 */
+	public void setOrg( Org org )
+	{
+		this.org = org;
+	}
+
+	public String getName( )
+	{
+		return this.name;
+	}
+
 	public void setName( String name )
 	{
 		this.name = name;
 	}
 
-	
-	/**
-	 * @return the city
-	 */
 	public String getCity( )
 	{
-		return city;
+		return this.city;
 	}
 
-	
-	/**
-	 * @param city the city to set
-	 */
 	public void setCity( String city )
 	{
 		this.city = city;
 	}
 
-	
-	/**
-	 * @return the orgId
-	 */
-	public Integer getOrgId( )
+	public String getLoginname( )
 	{
-		return orgId;
+		return this.loginname;
 	}
 
-	
-	/**
-	 * @param orgId the orgId to set
-	 */
-	public void setOrgId( Integer orgId )
+	public void setLoginname( String loginname )
 	{
-		this.orgId = orgId;
+		this.loginname = loginname;
 	}
 
-	
-	/**
-	 * @return the loginName
-	 */
-	public String getLoginName( )
+	public String getPassword( )
 	{
-		return loginName;
+		return this.password;
 	}
 
-	
-	/**
-	 * @param loginName the loginName to set
-	 */
-	public void setLoginName( String loginName )
+	public void setPassword( String password )
 	{
-		this.loginName = loginName;
+		this.password = password;
 	}
 
-	
-	/**
-	 * @return the loginPassword
-	 */
-	public String getLoginPassword( )
+	public Set<Classes> getClasseses( )
 	{
-		return loginPassword;
+		return this.classeses;
 	}
 
-	
-	/**
-	 * @param loginPassword the loginPassword to set
-	 */
-	public void setLoginPassword( String loginPassword )
+	public void setClasseses( Set<Classes> classeses )
 	{
-		this.loginPassword = loginPassword;
+		this.classeses = classeses;
 	}
 
 }
