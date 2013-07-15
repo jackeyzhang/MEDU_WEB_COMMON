@@ -8,7 +8,7 @@ import java.util.Date;
 
 
 /**
- * 站内信
+ * 站内信或通知
  * 
  * @author chenhao
  *
@@ -186,4 +186,5 @@ public class Message implements Serializable
 	{
 		this.title = title;
 	}
+
 }
