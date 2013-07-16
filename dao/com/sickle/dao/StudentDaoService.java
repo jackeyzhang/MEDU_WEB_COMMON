@@ -1,13 +1,16 @@
-package com.sickle.service.dao;
+package com.sickle.dao;
 
 import org.hibernate.Query;
 
-import com.sickle.dao.HibernateSupport;
 import com.sickle.pojo.edu.Classes;
 import com.sickle.pojo.edu.Student;
 import com.sickle.service.IStudentService;
 
-
+/**
+ * 学生dao服务
+ * @author chenhao
+ *
+ */
 public class StudentDaoService extends HibernateSupport<Student> implements IStudentService 
 {
 

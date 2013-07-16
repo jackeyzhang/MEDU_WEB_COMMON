@@ -1,16 +1,16 @@
 /**
  * 
  */
-package com.sickle.service.dao;
+package com.sickle.dao;
 
 import org.hibernate.Query;
 
-import com.sickle.dao.HibernateSupport;
 import com.sickle.pojo.edu.Classes;
 import com.sickle.service.IClassesService;
 
 
 /**
+ * 班级dao服务
  * @author chenhao
  *
  */
