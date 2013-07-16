@@ -1,5 +1,7 @@
 package com.sickle.dao;
 
+import java.util.List;
+
 import org.hibernate.Query;
 
 import com.sickle.pojo.edu.Classes;
@@ -38,6 +40,49 @@ public class StudentDaoService extends HibernateSupport<Student> implements IStu
 		return (Student)query.list( ).get( 0 );
 	}
 
+	@Override
+	public Student addStudent( Student stu ) throws Exception
+	{
+		return save( stu );
+	}
+
+	@Override
+	public boolean removeStudentById( Integer id ) throws Exception
+	{
+		Student removed = getStudentById(id);
+		try
+		{
+			delete( removed );
+		}catch(Exception e)
+		{
+			return false;
+		}
+		return true;
+	}
+
+	@Override
+	public boolean removeStudentByLoginName( String loginName )
+			throws Exception
+	{
+		Student removed = getStudentByLoginName(loginName);
+		try
+		{
+			delete( removed );
+		}catch(Exception e)
+		{
+			return false;
+		}
+		return true;
+	}
+
+	@Override
+	public List<Student> removeStudentByClassesId( Integer classid )
+			throws Exception
+	{
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
 	/**
 	 * @param args
 	 */
