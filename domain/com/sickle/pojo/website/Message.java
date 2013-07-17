@@ -34,6 +34,9 @@ public class Message implements Serializable
 	
 	private String title;
 	
+	//默认保存天数
+	private Integer defaultSaveDay;
+	
 	/**
 	 * 
 	 */
@@ -187,4 +190,23 @@ public class Message implements Serializable
 		this.title = title;
 	}
 
+	
+	/**
+	 * @return the defaultSaveDay
+	 */
+	public Integer getDefaultSaveDay( )
+	{
+		return defaultSaveDay;
+	}
+
+	
+	/**
+	 * @param defaultSaveDay the defaultSaveDay to set
+	 */
+	public void setDefaultSaveDay( Integer defaultSaveDay )
+	{
+		this.defaultSaveDay = defaultSaveDay;
+	}
+
+	
 }

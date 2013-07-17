@@ -58,4 +58,12 @@ public interface IStudentService
 	 */
 	List<Student> removeStudentByClassesId(Integer classid)throws Exception;
 	
+	/**
+	 * 修改学生
+	 * @param student
+	 * @return
+	 * @throws Exception
+	 */
+	Student modifyStudent(Student student)throws Exception;
+	
 }

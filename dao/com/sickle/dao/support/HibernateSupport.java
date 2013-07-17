@@ -1,6 +1,7 @@
-package com.sickle.dao;
+package com.sickle.dao.support;
 
 import org.hibernate.Session;
+
 
 /**
  * dao service都要继承此类

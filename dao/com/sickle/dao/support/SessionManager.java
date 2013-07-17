@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.sickle.dao;
+package com.sickle.dao.support;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;

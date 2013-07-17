@@ -4,12 +4,14 @@ import java.util.List;
 
 import org.hibernate.Query;
 
+import com.sickle.dao.support.HibernateSupport;
 import com.sickle.pojo.edu.Classes;
 import com.sickle.pojo.edu.Student;
 import com.sickle.service.IStudentService;
 
 /**
  * 学生dao服务
+ * 
  * @author chenhao
  *
  */
@@ -83,6 +85,12 @@ public class StudentDaoService extends HibernateSupport<Student> implements IStu
 		return null;
 	}
 	
+	@Override
+	public Student modifyStudent( Student student ) throws Exception
+	{
+		return this.update( student );
+	}
+	
 	/**
 	 * @param args
 	 */
@@ -100,4 +108,6 @@ public class StudentDaoService extends HibernateSupport<Student> implements IStu
 		service.save( stu );
 		service.getStudentById( 1 );
 	}
+
+
 }
