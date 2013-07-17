@@ -12,7 +12,6 @@ public class Org implements java.io.Serializable
 	private String manager;
 	private String loginName;
 	private String password;
-	private String orgcol;
 	private Set<School> schools = new HashSet<School>( 0 );
 
 	public Org( )
@@ -20,7 +19,7 @@ public class Org implements java.io.Serializable
 	}
 
 	public Org( String name, String address, String telephone, String manager,
-			String loginName, String password, String orgcol )
+			String loginName, String password)
 	{
 		this.name = name;
 		this.address = address;
@@ -28,12 +27,10 @@ public class Org implements java.io.Serializable
 		this.manager = manager;
 		this.loginName = loginName;
 		this.password = password;
-		this.orgcol = orgcol;
 	}
 
 	public Org( String name, String address, String telephone, String manager,
-			String loginName, String password, String orgcol,
-			Set<School> schools )
+			String loginName, String password, Set<School> schools )
 	{
 		this.name = name;
 		this.address = address;
@@ -41,7 +38,6 @@ public class Org implements java.io.Serializable
 		this.manager = manager;
 		this.loginName = loginName;
 		this.password = password;
-		this.orgcol = orgcol;
 		this.schools = schools;
 	}
 
@@ -115,15 +111,6 @@ public class Org implements java.io.Serializable
 		this.password = password;
 	}
 
-	public String getOrgcol( )
-	{
-		return this.orgcol;
-	}
-
-	public void setOrgcol( String orgcol )
-	{
-		this.orgcol = orgcol;
-	}
 
 	public Set<School> getSchools( )
 	{

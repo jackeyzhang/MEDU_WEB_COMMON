@@ -1,3 +1,5 @@
+CREATE DATABASE `medu` /*!40100 DEFAULT CHARACTER SET utf8 */$$
+
 delimiter $$
 
 CREATE TABLE `classes` (
@@ -11,7 +13,7 @@ CREATE TABLE `classes` (
   KEY `teacher_fk_idx` (`teacherid`),
   CONSTRAINT `school_fk` FOREIGN KEY (`schoolid`) REFERENCES `school` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `teacher_fk` FOREIGN KEY (`teacherid`) REFERENCES `teacher` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='班级信息'$$
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='班级信息'$$
 
 
 delimiter $$
@@ -24,9 +26,8 @@ CREATE TABLE `org` (
   `manager` varchar(45) NOT NULL,
   `loginName` varchar(45) NOT NULL,
   `password` varchar(45) NOT NULL,
-  `orgcol` varchar(45) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='公司信息'$$
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='公司信息'$$
 
 
 delimiter $$
@@ -61,7 +62,7 @@ CREATE TABLE `student` (
   PRIMARY KEY (`id`),
   KEY `class_fk_idx` (`classId`),
   CONSTRAINT `class_fk` FOREIGN KEY (`classId`) REFERENCES `classes` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COMMENT='学生信息'$$
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='学生信息'$$
 
 
 delimiter $$

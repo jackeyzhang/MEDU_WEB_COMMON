@@ -26,9 +26,6 @@
         <property name="password" type="string">
             <column name="password" length="45" not-null="true" />
         </property>
-        <property name="orgcol" type="string">
-            <column name="orgcol" length="45" not-null="true" />
-        </property>
         <set name="schools" table="school" inverse="true" lazy="true" fetch="select">
             <key>
                 <column name="orgid" />
