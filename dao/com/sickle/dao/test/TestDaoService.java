@@ -4,7 +4,9 @@
 package com.sickle.dao.test;
 
 import com.sickle.dao.OrgDaoService;
+import com.sickle.dao.SchoolDaoService;
 import com.sickle.pojo.edu.Org;
+import com.sickle.pojo.edu.School;
 
 
 /**
@@ -20,18 +22,18 @@ public class TestDaoService
 	 */
 	public static void main( String[] args )
 	{
-		
-		
 		OrgDaoService oservice = new OrgDaoService();
 		Org org = new Org("汲原堂","延平路69号601B","15236362525","MisMa","jiyuantang","123456");
 		oservice.save( org );
 		
-//		SchoolDaoService sservice = new SchoolDaoService();
-//		sservice.getSession( ).beginTransaction( );
-//		sservice.getSession( ).createQuery( "delete from School where id>0" ).executeUpdate( );
-//		sservice.getSession( ).beginTransaction( ).commit( );
-//		
-//		TeacherDaoService tservice = new TeacherDaoService();
+		SchoolDaoService sservice = new SchoolDaoService();
+		School school = new School("静安教学点","jingan");
+		school.setOrg( org );
+		
+		org.getSchools( ).add( school );
+		sservice.save( school );
+		
+		//		TeacherDaoService tservice = new TeacherDaoService();
 //		tservice.getSession( ).beginTransaction( );
 //		tservice.getSession( ).createQuery( "delete from Teacher where id>0" ).executeUpdate( );
 //		tservice.getSession( ).beginTransaction( ).commit( );

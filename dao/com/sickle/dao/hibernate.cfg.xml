@@ -8,6 +8,8 @@
   <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/medu</property>
   <property name="hibernate.connection.username">root</property>
   <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+  <property name="connection.useUnicode">true</property>
+  <property name="connection.characterEncoding">UTF-8</property> 
   <mapping class="com.sickle.pojo.edu.Classes" resource="com/sickle/pojo/edu/Classes.hbm.xml"/>
   <mapping class="com.sickle.pojo.edu.Org" resource="com/sickle/pojo/edu/Org.hbm.xml"/>
   <mapping class="com.sickle.pojo.edu.School" resource="com/sickle/pojo/edu/School.hbm.xml"/>
