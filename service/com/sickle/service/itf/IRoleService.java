@@ -5,7 +5,6 @@ package com.sickle.service.itf;
 
 import java.util.List;
 
-import com.sickle.pojo.role.Module;
 import com.sickle.pojo.role.OpAndValue;
 import com.sickle.pojo.role.Role;
 
@@ -26,15 +25,8 @@ public interface IRoleService
 	 * @param opname
 	 * @return
 	 */
-	boolean validateOp(Role role,Module module,OpAndValue op);
+	boolean validateOp(Role role,OpAndValue op);
 	
-	/**
-	 *  获取到角色的可操作模块
-	 *  
-	 * @param role
-	 * @return
-	 */
-	List<Module> getModule(Role role);
 	
 	/**
 	 *  获取某个角色在某个模块的操作
@@ -42,5 +34,5 @@ public interface IRoleService
 	 * @param module
 	 * @return
 	 */
-	List<OpAndValue> getOp(Role role,Module module);
+	List<OpAndValue> getOp(Role role);
 }
