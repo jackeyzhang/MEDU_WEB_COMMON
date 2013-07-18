@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.sickle.service;
+package com.sickle.service.itf;
 
 import com.sickle.pojo.edu.Teacher;
 

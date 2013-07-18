@@ -19,8 +19,11 @@ public class Role implements Serializable
 	//角色名称
 	private String  displayName;
 	
-	//角色值
-	private Integer value;
+	//模块值
+	private Integer modulevalue;
+	
+	//操作值
+	private Integer opvalue;
 
 	
 	/**
@@ -58,22 +61,43 @@ public class Role implements Serializable
 		this.displayName = displayName;
 	}
 
-	
-	/**
-	 * @return the value
-	 */
-	public Integer getValue( )
-	{
-		return value;
-	}
 
 	
 	/**
-	 * @param value the value to set
+	 * @return the opvalue
 	 */
-	public void setValue( Integer value )
+	public Integer getOpvalue( )
 	{
-		this.value = value;
+		return opvalue;
 	}
 
+
+	
+	/**
+	 * @param opvalue the opvalue to set
+	 */
+	public void setOpvalue( Integer opvalue )
+	{
+		this.opvalue = opvalue;
+	}
+
+
+	
+	/**
+	 * @return the modulevalue
+	 */
+	public Integer getModulevalue( )
+	{
+		return modulevalue;
+	}
+
+
+	
+	/**
+	 * @param modulevalue the modulevalue to set
+	 */
+	public void setModulevalue( Integer modulevalue )
+	{
+		this.modulevalue = modulevalue;
+	}
 }

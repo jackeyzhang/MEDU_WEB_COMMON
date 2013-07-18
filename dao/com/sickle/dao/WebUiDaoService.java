@@ -7,7 +7,7 @@ import org.hibernate.Query;
 
 import com.sickle.dao.support.HibernateSupport;
 import com.sickle.pojo.website.WebUi;
-import com.sickle.service.IWebUiService;
+import com.sickle.service.itf.IWebUiService;
 
 
 /**

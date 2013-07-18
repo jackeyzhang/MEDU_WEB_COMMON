@@ -7,7 +7,7 @@ import org.hibernate.Query;
 
 import com.sickle.dao.support.HibernateSupport;
 import com.sickle.pojo.edu.School;
-import com.sickle.service.ISchoolService;
+import com.sickle.service.itf.ISchoolService;
 
 
 /**

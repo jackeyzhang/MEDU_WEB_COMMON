@@ -1,4 +1,4 @@
-package com.sickle.service;
+package com.sickle.service.itf;
 
 import java.util.List;
 
