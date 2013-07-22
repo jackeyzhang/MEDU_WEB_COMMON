@@ -15,7 +15,7 @@ public class DaoServiceFactory
 {
 	
 	@SuppressWarnings("unchecked")
-	public final static <T> T getService(Class<T> t) throws CodeException, ClassNotFoundException, InstantiationException, IllegalAccessException
+	public final static <T> T getService(Class<T> t) throws CodeException
 	{
 		String itfname = t.getName( );
 		String[] itfnames = itfname.split( "Service" );
@@ -26,7 +26,17 @@ public class DaoServiceFactory
 		int index = itfnames[0].indexOf( "itf." );
 		String classname = "com.sickle.dao." + itfnames[0].substring( index ) + "DaoService";
 		
-		return (T)Class.forName( classname ).newInstance( );
+		T obj = null;
+		try
+		{
+			obj = (T)Class.forName( classname ).newInstance( );
+		}
+		catch ( Exception e )
+		{
+			throw new CodeException("不合理的代码调用 ： " + itfname,e.getCause( ));
+		}
+		
+		return obj;
 	}
 
 }
