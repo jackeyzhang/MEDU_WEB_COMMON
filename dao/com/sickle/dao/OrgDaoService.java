@@ -3,6 +3,8 @@
  */
 package com.sickle.dao;
 
+import java.util.List;
+
 import org.hibernate.Query;
 
 import com.sickle.dao.support.HibernateSupport;
@@ -82,6 +84,18 @@ public class OrgDaoService extends HibernateSupport<Org> implements IOrgService
 			return null;
 		}
 		return (Org)query.list( ).get( 0 );
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Org> listAllOrg( )
+	{
+		Query query = getSession( ).createQuery( "from Org " );
+		if(query.list( ) == null || query.list( ).size( ) == 0 )
+		{
+			return null;
+		}
+		return query.list( );
 	}
 
 

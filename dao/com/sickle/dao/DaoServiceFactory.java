@@ -24,7 +24,7 @@ public class DaoServiceFactory
 			throw new CodeException("不合理的代码调用 ： " + itfname);
 		}
 		int index = itfnames[0].indexOf( "itf." );
-		String classname = "com.sickle.dao." + itfnames[0].substring( index ) + "DaoService";
+		String classname = "com.sickle.dao." + itfnames[0].substring( index + 5) + "DaoService";
 		
 		T obj = null;
 		try

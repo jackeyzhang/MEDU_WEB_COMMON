@@ -3,6 +3,8 @@
  */
 package com.sickle.service.itf;
 
+import java.util.List;
+
 import com.sickle.pojo.edu.Org;
 
 
@@ -15,6 +17,13 @@ import com.sickle.pojo.edu.Org;
 public interface IOrgService
 {
 
+	/**
+	 * 列出所有org
+	 * 
+	 * @return
+	 */
+	List<Org> listAllOrg();
+	
 	/**
 	 * 根据id获取org对象
 	 * 
