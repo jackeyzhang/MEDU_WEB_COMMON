@@ -9,4 +9,5 @@
   <inherits name='com.google.gwt.user.User'/>
   
   <source path='pojo'/>
+  <source path='uireflect'/>
 </module>
