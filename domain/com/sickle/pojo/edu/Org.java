@@ -3,25 +3,26 @@ import java.util.HashSet;
 import java.util.Set;
 
 import com.gwtent.reflection.client.annotations.Reflect_Domain;
+import com.sickle.uireflect.FieldType;
 import com.sickle.uireflect.Reflect_Field;
 
 @Reflect_Domain
 public class Org implements java.io.Serializable
 {
 	private static final long serialVersionUID = 2563453980930335917L;
-	@Reflect_Field(type = "int",isId = true)
+	@Reflect_Field(type = FieldType.String,isId = true)
 	private Integer id;
 	@Reflect_Field(title="名字")
 	private String name;
 	@Reflect_Field(title="地址")
 	private String address;
-	@Reflect_Field(title="电话")
+	@Reflect_Field(title="电话",type = FieldType.Mobile)
 	private String telephone;
 	@Reflect_Field(title="管理人")
 	private String manager;
 	@Reflect_Field(title="登录名")
 	private String loginName;
-	@Reflect_Field(title="密码")
+	@Reflect_Field(title="密码",type = FieldType.Password)
 	private String password;
 	private Set<School> schools = new HashSet<School>( 0 );
 

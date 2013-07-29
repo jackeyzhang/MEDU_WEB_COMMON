@@ -30,10 +30,10 @@ public @interface Reflect_Field
 	/**
 	 * 字段类型
 	 * 
-	 * String int float
+	 * String int float password check list date
 	 * @return
 	 */
-	String type() default "String";
+	FieldType type() default FieldType.String;
 	
 	/**
 	 * 是否展示在界面上
@@ -48,5 +48,17 @@ public @interface Reflect_Field
 	 * @return
 	 */
 	String title() default "";
+	
+	/**
+	 * 校验字符串
+	 * 
+	 * 类型+限制
+	 * 
+	 * 类型：S--String E--Email I--Int
+	 * 
+	 * 限制0-15大于0 小于15或者长度在0到15之间
+	 * @return
+	 */
+	String validateStr() default "S0-15";
 	
 }
