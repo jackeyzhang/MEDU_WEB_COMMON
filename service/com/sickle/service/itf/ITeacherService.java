@@ -3,6 +3,8 @@
  */
 package com.sickle.service.itf;
 
+import java.util.List;
+
 import com.sickle.pojo.edu.Teacher;
 
 
@@ -68,4 +70,10 @@ public interface ITeacherService
 	 */
 	Teacher modifyTeacher(Teacher teacher)throws Exception;
 	
+	/**
+	 * 查找好评比较高的老师
+	 * @return
+	 * @throws Exception
+	 */
+	List<Teacher> getPopularTeacher() throws Exception;
 }
