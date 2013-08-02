@@ -5,16 +5,23 @@ package com.sickle.uireflect;
 
 
 /**
+ * 表单中会出现的字段类型
+ * 
+ * 丰富而实用的类型
+ * 
  * @author chenhao
  *
  */
 public enum FieldType {
+	
 	
 	String,
 	
 	Integer,
 	
 	Date,
+	
+	DateTime,
 	
 	Check,
 	
@@ -24,6 +31,8 @@ public enum FieldType {
 	
 	Password,
 	
-	Mobile;
+	Mobile,
+	
+	Email;
 
 }

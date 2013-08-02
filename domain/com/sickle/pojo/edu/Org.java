@@ -10,7 +10,7 @@ import com.sickle.uireflect.Reflect_Field;
 public class Org implements java.io.Serializable
 {
 	private static final long serialVersionUID = 2563453980930335917L;
-	@Reflect_Field(type = FieldType.String,isId = true)
+	@Reflect_Field(type = FieldType.Integer,isId = true)
 	private Integer id;
 	@Reflect_Field(title="名字")
 	private String name;
