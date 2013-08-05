@@ -86,11 +86,13 @@ CREATE TABLE `teacher` (
 delimiter $$
 
 CREATE TABLE `web_ui` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(50) DEFAULT NULL,
   `context` varchar(5000) DEFAULT NULL,
   `hint` varchar(500) DEFAULT NULL,
   `alert` varchar(500) DEFAULT NULL,
+  `elementid` varchar(50) NOT NULL,
+  `version` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='界面定制化表'$$
 
