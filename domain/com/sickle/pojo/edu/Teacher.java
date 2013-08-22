@@ -2,19 +2,35 @@ package com.sickle.pojo.edu;
 import java.util.HashSet;
 import java.util.Set;
 
+import com.gwtent.reflection.client.annotations.Reflect_Domain;
+import com.sickle.uireflect.FieldType;
+import com.sickle.uireflect.Reflect_Field;
+
+@Reflect_Domain
 public class Teacher implements java.io.Serializable
 {
 	private static final long serialVersionUID = -6913802896040250403L;
+	@Reflect_Field(type = FieldType.Integer,isId = true)
 	private Integer id;
+	@Reflect_Field(title="名字",reqiured = true,mask = 15)
 	private String name;
+	@Reflect_Field(title="性别",reqiured = true)
 	private String sex;
+	@Reflect_Field(title="爱好")
 	private String hobby;
+	@Reflect_Field(title="联系方式",type=FieldType.Mobile,reqiured = true)
 	private String contact;
+	@Reflect_Field(title="电子邮箱",type=FieldType.Email,reqiured = true)
 	private String email;
+	@Reflect_Field(title="工作年限",type=FieldType.Integer,reqiured = true)
 	private Integer workage;
+	@Reflect_Field(title="级别",type=FieldType.Float)
 	private Float grade;
+	@Reflect_Field(title="开放状态",type=FieldType.Integer)
 	private Integer openStatus;
+	@Reflect_Field(title="登陆名字",reqiured = true,mask = 15)
 	private String loginName;
+	@Reflect_Field(title="密码",reqiured = true,type = FieldType.Password)
 	private String password;
 	private Set<Classes> classeses = new HashSet<Classes>( 0 );
 

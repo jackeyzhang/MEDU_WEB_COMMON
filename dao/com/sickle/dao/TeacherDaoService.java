@@ -84,4 +84,14 @@ public class TeacherDaoService extends HibernateSupport<Teacher> implements
 		return ls;
 	}
 
+	@Override
+	public List<Teacher> listAllTeachers( ) throws Exception
+	{
+		Query query = getSession().createQuery("from Teacher");
+		if (query.list() == null || query.list().size() == 0) {
+			return null;
+		}
+		return query.list();
+	}
+
 }

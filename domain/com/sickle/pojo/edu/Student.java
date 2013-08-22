@@ -1,19 +1,34 @@
 package com.sickle.pojo.edu;
 import java.util.Date;
 
+import com.gwtent.reflection.client.annotations.Reflect_Domain;
+import com.sickle.uireflect.FieldType;
+import com.sickle.uireflect.Reflect_Field;
+@Reflect_Domain
 public class Student implements java.io.Serializable
 {
 	private static final long serialVersionUID = 3214724826217009615L;
+	@Reflect_Field(type = FieldType.Integer,isId = true)
 	private Integer id;
+	@Reflect_Field(title="班级")
 	private Classes classes;
+	@Reflect_Field(title="名字")
 	private String name;
+	@Reflect_Field(title="性别")
 	private String sex;
+	@Reflect_Field(title="生日")
 	private Date birthday;
+	@Reflect_Field(title="地址")
 	private String address;
+	@Reflect_Field(title="联系方式")
 	private String contact;
+	@Reflect_Field(title="电子邮箱")
 	private String email;
+	@Reflect_Field(title="家长信息")
 	private String parent;
+	@Reflect_Field(title="登录名")
 	private String loginName;
+	@Reflect_Field(title="密码")
 	private String password;
 
 	public Student( )

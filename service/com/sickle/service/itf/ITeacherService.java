@@ -76,4 +76,6 @@ public interface ITeacherService
 	 * @throws Exception
 	 */
 	List<Teacher> getPopularTeacher() throws Exception;
+	
+	List<Teacher> listAllTeachers() throws Exception;
 }

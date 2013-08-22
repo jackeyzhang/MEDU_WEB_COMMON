@@ -3,14 +3,23 @@ package com.sickle.pojo.edu;
 import java.util.HashSet;
 import java.util.Set;
 
+import com.gwtent.reflection.client.annotations.Reflect_Domain;
+import com.sickle.uireflect.FieldType;
+import com.sickle.uireflect.Reflect_Field;
+@Reflect_Domain
 public class Classes implements java.io.Serializable
 {
 
 	private static final long serialVersionUID = 8836404241907066509L;
+	@Reflect_Field(type = FieldType.Integer,isId = true)
 	private Integer id;
+	@Reflect_Field(title="老师")
 	private Teacher teacher;
+	@Reflect_Field(title="学校")
 	private School school;
+	@Reflect_Field(title="名字")
 	private String name;
+	@Reflect_Field(title="授课时间")
 	private String classtime;
 	private Set<Student> students = new HashSet<Student>( 0 );
 

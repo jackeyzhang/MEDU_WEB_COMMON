@@ -2,14 +2,24 @@ package com.sickle.pojo.edu;
 import java.util.HashSet;
 import java.util.Set;
 
+import com.gwtent.reflection.client.annotations.Reflect_Domain;
+import com.sickle.uireflect.FieldType;
+import com.sickle.uireflect.Reflect_Field;
+@Reflect_Domain
 public class School implements java.io.Serializable
 {
 	private static final long serialVersionUID = -7356876508819459715L;
+	@Reflect_Field(type = FieldType.Integer,isId = true)
 	private Integer id;
+	@Reflect_Field(title="组织结构")
 	private Org org;
+	@Reflect_Field(title="名字")
 	private String name;
+	@Reflect_Field(title="所在城市")
 	private String city;
+	@Reflect_Field(title="登陆名字")
 	private String loginname;
+	@Reflect_Field(title="密码")
 	private String password;
 	private Set<Classes> classeses = new HashSet<Classes>( 0 );
 

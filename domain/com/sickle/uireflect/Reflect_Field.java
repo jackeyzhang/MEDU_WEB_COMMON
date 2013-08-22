@@ -28,6 +28,13 @@ public @interface Reflect_Field
 	boolean isId() default false;
 	
 	/**
+	 * 允许为空吗
+	 * 
+	 * @return
+	 */
+	boolean reqiured() default false;
+	
+	/**
 	 * 字段类型
 	 * 
 	 * String int float password check list date
@@ -52,13 +59,18 @@ public @interface Reflect_Field
 	/**
 	 * 校验字符串
 	 * 
-	 * 类型+限制
-	 * 
-	 * 类型：S--String E--Email I--Int
-	 * 
 	 * 限制0-15大于0 小于15或者长度在0到15之间
 	 * @return
 	 */
-	String validateStr() default "S0-15";
+	String validateStr() default "0-15";
+	
+	/**
+	 * 获取掩码
+	 * 
+	 * 决定了是否允许修改 是否enable
+	 * 
+	 * @return
+	 */
+	int mask() default 0;
 	
 }
