@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2013-8-14 16:00:11 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="Message" table="message" catalog="medu">
+        <id name="id" type="java.lang.Long">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="from" type="int">
+            <column name="from" not-null="true" />
+        </property>
+        <property name="to" type="int">
+            <column name="to" not-null="true" />
+        </property>
+        <property name="hasread" type="string">
+            <column name="hasread" length="2" />
+        </property>
+        <property name="date" type="timestamp">
+            <column name="date" length="19" />
+        </property>
+        <property name="content" type="string">
+            <column name="content" length="4500" />
+        </property>
+        <property name="title" type="string">
+            <column name="title" length="100" />
+        </property>
+        <property name="type" type="string">
+            <column name="type" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>

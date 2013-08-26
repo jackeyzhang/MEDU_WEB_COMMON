@@ -19,6 +19,8 @@ public enum FieldType {
 	
 	Integer,
 	
+	Long,
+	
 	Date,
 	
 	DateTime,

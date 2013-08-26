@@ -6,7 +6,6 @@ package com.sickle.dao;
 import java.util.List;
 
 import org.hibernate.Query;
-import org.hibernate.Session;
 
 import com.sickle.dao.support.HibernateSupport;
 import com.sickle.pojo.edu.Teacher;
@@ -80,10 +79,12 @@ public class TeacherDaoService extends HibernateSupport<Teacher> implements
 		Query query = getSession().createQuery(hql);
 		query.setFirstResult(1);
 		query.setMaxResults(10);
+		@SuppressWarnings("unchecked")
 		List<Teacher> ls = query.list();
 		return ls;
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<Teacher> listAllTeachers( ) throws Exception
 	{
