@@ -95,4 +95,17 @@ public class TeacherDaoService extends HibernateSupport<Teacher> implements
 		return query.list();
 	}
 
+	@Override
+	public List<Teacher> listTeachers( int startindex, int length )
+			throws Exception
+	{
+		String hql = "from Teacher";
+		Query query = getSession().createQuery(hql);
+		query.setFirstResult(startindex);
+		query.setMaxResults(length);
+		@SuppressWarnings("unchecked")
+		List<Teacher> ls = query.list();
+		return ls;
+	}
+
 }

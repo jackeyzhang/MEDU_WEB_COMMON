@@ -78,4 +78,6 @@ public interface ITeacherService
 	List<Teacher> getPopularTeacher() throws Exception;
 	
 	List<Teacher> listAllTeachers() throws Exception;
+	
+	List<Teacher> listTeachers( int startindex, int length )throws Exception;
 }
