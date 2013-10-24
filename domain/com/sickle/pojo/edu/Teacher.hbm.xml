@@ -38,6 +38,9 @@
         <property name="password" type="string">
             <column name="password" length="45" not-null="true" />
         </property>
+         <property name="resume" type="string">
+            <column name="resume" length="50" not-null="true" />
+        </property>
         <set name="classeses" table="classes" inverse="true" lazy="true" fetch="select">
             <key>
                 <column name="teacherid" not-null="true" />

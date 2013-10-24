@@ -77,4 +77,11 @@ public interface IOrgService
 	 */
 	Org modifyOrg(Org org)throws Exception;
 	
+	/**
+	 * 列出所有org
+	 * 
+	 * @return
+	 */
+	List<Org> listOrg(int startIndex, int length);
+	
 }

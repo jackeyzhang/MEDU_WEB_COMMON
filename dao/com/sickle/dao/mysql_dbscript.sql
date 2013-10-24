@@ -79,6 +79,7 @@ CREATE TABLE `teacher` (
   `openStatus` int(11) DEFAULT NULL,
   `loginName` varchar(45) NOT NULL,
   `password` varchar(45) NOT NULL,
+  `resume` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='老师信息'$$
 

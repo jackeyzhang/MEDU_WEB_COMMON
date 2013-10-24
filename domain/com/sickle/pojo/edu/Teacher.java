@@ -32,6 +32,8 @@ public class Teacher implements java.io.Serializable
 	private String loginName;
 	@Reflect_Field(title="密码",reqiured = true,type = FieldType.Password)
 	private String password;
+	@Reflect_Field(title="个人介绍",reqiured = true)
+	private String resume;
 	private Set<Classes> classeses = new HashSet<Classes>( 0 );
 
 	public Teacher( )
@@ -48,7 +50,7 @@ public class Teacher implements java.io.Serializable
 
 	public Teacher( String name, String sex, String hobby, String contact,
 			String email, Integer workage, Float grade, Integer openStatus,
-			String loginName, String password, Set<Classes> classeses )
+			String loginName, String password, String resume,Set<Classes> classeses )
 	{
 		this.name = name;
 		this.sex = sex;
@@ -60,6 +62,7 @@ public class Teacher implements java.io.Serializable
 		this.openStatus = openStatus;
 		this.loginName = loginName;
 		this.password = password;
+		this.resume = resume;
 		this.classeses = classeses;
 	}
 
@@ -182,5 +185,25 @@ public class Teacher implements java.io.Serializable
 	{
 		this.classeses = classeses;
 	}
+
+	
+	/**
+	 * @return the resume
+	 */
+	public String getResume( )
+	{
+		return resume;
+	}
+
+	
+	/**
+	 * @param resume the resume to set
+	 */
+	public void setResume( String resume )
+	{
+		this.resume = resume;
+	}
+	
+	
 
 }

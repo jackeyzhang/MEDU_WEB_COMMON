@@ -98,5 +98,15 @@ public class OrgDaoService extends HibernateSupport<Org> implements IOrgService
 		return query.list( );
 	}
 
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Org> listOrg( int startIndex, int length )
+	{
+		Query query = getSession( ).createQuery( "from Org " );
+		query.setFirstResult(startIndex);
+		query.setMaxResults(length);
+		return query.list( );
+	}
+
 
 }
