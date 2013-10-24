@@ -41,6 +41,12 @@
          <property name="resume" type="string">
             <column name="resume" length="50" not-null="true" />
         </property>
+        <property name="orgname" type="string">
+            <column name="orgname" length="20" not-null="true" />
+        </property>
+        <property name="title" type="string">
+            <column name="title" length="10" not-null="true" />
+        </property>
         <set name="classeses" table="classes" inverse="true" lazy="true" fetch="select">
             <key>
                 <column name="teacherid" not-null="true" />

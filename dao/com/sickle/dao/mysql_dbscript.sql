@@ -80,8 +80,10 @@ CREATE TABLE `teacher` (
   `loginName` varchar(45) NOT NULL,
   `password` varchar(45) NOT NULL,
   `resume` varchar(50) NOT NULL,
+  `orgname` varchar(20) NOT NULL,
+  `title` varchar(10) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='老师信息'$$
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8 COMMENT='老师信息'$$
 
 
 delimiter $$

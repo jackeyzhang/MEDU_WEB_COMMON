@@ -34,6 +34,10 @@ public class Teacher implements java.io.Serializable
 	private String password;
 	@Reflect_Field(title="个人介绍",reqiured = true)
 	private String resume;
+	@Reflect_Field(title="工作单位",reqiured = true)
+	private String orgname;
+	@Reflect_Field(title="职位",reqiured = true)
+	private String title;
 	private Set<Classes> classeses = new HashSet<Classes>( 0 );
 
 	public Teacher( )
@@ -50,7 +54,8 @@ public class Teacher implements java.io.Serializable
 
 	public Teacher( String name, String sex, String hobby, String contact,
 			String email, Integer workage, Float grade, Integer openStatus,
-			String loginName, String password, String resume,Set<Classes> classeses )
+			String loginName, String password, String resume,String orgname,
+			String title,Set<Classes> classeses )
 	{
 		this.name = name;
 		this.sex = sex;
@@ -63,6 +68,8 @@ public class Teacher implements java.io.Serializable
 		this.loginName = loginName;
 		this.password = password;
 		this.resume = resume;
+		this.orgname = orgname;
+		this.title = title;
 		this.classeses = classeses;
 	}
 
@@ -203,7 +210,41 @@ public class Teacher implements java.io.Serializable
 	{
 		this.resume = resume;
 	}
+
 	
+	/**
+	 * @return the orgname
+	 */
+	public String getOrgname( )
+	{
+		return orgname;
+	}
+
 	
+	/**
+	 * @param orgname the orgname to set
+	 */
+	public void setOrgname( String orgname )
+	{
+		this.orgname = orgname;
+	}
+
+	
+	/**
+	 * @return the title
+	 */
+	public String getTitle( )
+	{
+		return title;
+	}
+
+	
+	/**
+	 * @param title the title to set
+	 */
+	public void setTitle( String title )
+	{
+		this.title = title;
+	}
 
 }
