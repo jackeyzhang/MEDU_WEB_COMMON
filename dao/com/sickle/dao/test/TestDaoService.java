@@ -5,13 +5,7 @@
 package com.sickle.dao.test;
 
 import com.sickle.dao.ClassesDaoService;
-import com.sickle.dao.OrgDaoService;
-import com.sickle.dao.SchoolDaoService;
-import com.sickle.dao.TeacherDaoService;
 import com.sickle.pojo.edu.Classes;
-import com.sickle.pojo.edu.Org;
-import com.sickle.pojo.edu.School;
-import com.sickle.pojo.edu.Teacher;
 
 /**
  * 清掉所有表
