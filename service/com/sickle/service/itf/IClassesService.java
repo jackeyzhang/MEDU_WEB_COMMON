@@ -1,5 +1,7 @@
 package com.sickle.service.itf;
 
+import java.util.List;
+
 import com.sickle.pojo.edu.Classes;
 
 /**
@@ -56,5 +58,7 @@ public interface IClassesService
 	 * @return
 	 */
 	boolean removeClassesByName(String schoolName)throws Exception;
+	
+	List<Classes> listClasses(int startindex,int length) throws Exception;
 	
 }

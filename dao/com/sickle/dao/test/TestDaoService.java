@@ -4,9 +4,11 @@
 
 package com.sickle.dao.test;
 
+import com.sickle.dao.ClassesDaoService;
 import com.sickle.dao.OrgDaoService;
 import com.sickle.dao.SchoolDaoService;
 import com.sickle.dao.TeacherDaoService;
+import com.sickle.pojo.edu.Classes;
 import com.sickle.pojo.edu.Org;
 import com.sickle.pojo.edu.School;
 import com.sickle.pojo.edu.Teacher;
@@ -25,7 +27,7 @@ public class TestDaoService
 	 */
 	public static void main( String[] args )
 	{
-		OrgDaoService oservice = new OrgDaoService( );
+		/*OrgDaoService oservice = new OrgDaoService( );
 		SchoolDaoService sservice = new SchoolDaoService( );
 
 		for ( int i = 0; i < 10; i++ )
@@ -47,6 +49,15 @@ public class TestDaoService
 		{
 			Teacher t = new Teacher("老师名字"+ i,"email"+ i +"@139.com","登录名","密码");
 			tservice.addTeacher( t );
+		}*/
+		
+		ClassesDaoService cservice = new ClassesDaoService();
+		for(int i = 0;i < 30;i++ )
+		{
+			Classes c = new Classes();
+			c.setName( "XX课程"+ i );
+			c.setClasstime( "每周五" );
+			cservice.addClasses( c );
 		}
 		
 //		TeacherDaoService tservice = new TeacherDaoService( );

@@ -3,6 +3,8 @@
  */
 package com.sickle.dao;
 
+import java.util.List;
+
 import org.hibernate.Query;
 
 import com.sickle.dao.support.HibernateSupport;
@@ -84,5 +86,15 @@ public class ClassesDaoService extends HibernateSupport<Classes> implements ICla
 		return (Classes)query.list( ).get( 0 );
 	}
 
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Classes> listClasses( int startindex, int length )
+			throws Exception
+	{
+		Query query = getSession( ).createQuery( "from Classes " );
+		query.setFirstResult(startindex);
+		query.setMaxResults(length);
+		return query.list( );
+	}
 
 }
