@@ -3,6 +3,7 @@
  */
 package com.sickle.dao;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.hibernate.Query;
@@ -69,7 +70,7 @@ public class MessageDaoService extends HibernateSupport<Message> implements IMes
 		query.setInteger( 0, userid );
 		if(query.list( ) == null || query.list( ).size( ) == 0 )
 		{
-			return null;
+			return new ArrayList<Message>();
 		}
 		return query.list( );
 	}
