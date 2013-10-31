@@ -4,8 +4,8 @@
 
 package com.sickle.dao.test;
 
-import com.sickle.dao.ClassesDaoService;
-import com.sickle.pojo.edu.Classes;
+import com.sickle.dao.NoticeDaoService;
+import com.sickle.pojo.edu.Notice;
 
 /**
  * 清掉所有表
@@ -45,13 +45,26 @@ public class TestDaoService
 			tservice.addTeacher( t );
 		}*/
 		
-		ClassesDaoService cservice = new ClassesDaoService();
+//		ClassesDaoService cservice = new ClassesDaoService();
+//		for(int i = 0;i < 30;i++ )
+//		{
+//			Classes c = new Classes();
+//			c.setName( "XX课程"+ i );
+//			c.setClasstime( "每周五" );
+//			cservice.addClasses( c );
+//		}
+		
+		
+		NoticeDaoService cservice = new NoticeDaoService();
 		for(int i = 0;i < 30;i++ )
 		{
-			Classes c = new Classes();
-			c.setName( "XX课程"+ i );
-			c.setClasstime( "每周五" );
-			cservice.addClasses( c );
+			Notice notice = new Notice();
+			notice.setPassed( i % 2 == 0? false:true );
+			notice.setPublisherid( 12 );
+			notice.setContent( "notice content:" + i );
+			notice.setAddress( "notice address:" + i );
+			notice.setDatedesc( "1/2/3 per week: " + i );
+			cservice.addNotice( notice );
 		}
 		
 //		TeacherDaoService tservice = new TeacherDaoService( );

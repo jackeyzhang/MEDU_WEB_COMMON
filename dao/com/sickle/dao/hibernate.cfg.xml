@@ -19,5 +19,6 @@
   <mapping resource="com/sickle/pojo/edu/Org.hbm.xml"/>
   <mapping resource="com/sickle/pojo/website/WebUi.hbm.xml"/>
   <mapping resource="com/sickle/pojo/edu/School.hbm.xml"/>
+  <mapping resource="com/sickle/pojo/edu/Notice.hbm.xml"/>
  </session-factory>
 </hibernate-configuration>

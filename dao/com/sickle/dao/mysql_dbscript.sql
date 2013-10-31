@@ -99,4 +99,16 @@ CREATE TABLE `web_ui` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='界面定制化表'$$
 
+delimiter $$
+
+CREATE TABLE `notice` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `publisherid` int(11)  NOT NULL,
+  `orgname` varchar(45) DEFAULT NULL,
+  `address` varchar(45) DEFAULT NULL,
+  `datedesc` varchar(45) DEFAULT NULL,
+  `content` varchar(45) DEFAULT NULL,
+  `passed` boolean DEFAULT false,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='通知'$$
 

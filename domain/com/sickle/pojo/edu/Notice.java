@@ -19,9 +19,11 @@ public class Notice implements java.io.Serializable
 	
 	private Integer publisherid;
 	
+	private String orgname;//机构名称
+	
 	private String address;
 	
-	private String date;
+	private String datedesc;
 	
 	private String content;
 	
@@ -33,16 +35,17 @@ public class Notice implements java.io.Serializable
 	/**
 	 * @param publisherid
 	 * @param address
-	 * @param date
+	 * @param datedesc
 	 * @param content
 	 */
-	public Notice( Integer publisherid, String address, String date,
+	public Notice( Integer publisherid, String orgname,String address, String datedesc,
 			String content )
 	{
 		super( );
+		this.orgname = orgname;
 		this.publisherid = publisherid;
 		this.address = address;
-		this.date = date;
+		this.datedesc = datedesc;
 		this.content = content;
 	}
 
@@ -104,18 +107,18 @@ public class Notice implements java.io.Serializable
 	/**
 	 * @return the date
 	 */
-	public String getDate( )
+	public String getDatedesc( )
 	{
-		return date;
+		return datedesc;
 	}
 
 	
 	/**
 	 * @param date the date to set
 	 */
-	public void setDate( String date )
+	public void setDatedesc( String datedesc )
 	{
-		this.date = date;
+		this.datedesc = datedesc;
 	}
 
 	
@@ -155,5 +158,24 @@ public class Notice implements java.io.Serializable
 	{
 		this.passed = passed;
 	}
+
+
 	
+	/**
+	 * @return the orgname
+	 */
+	public String getOrgname( )
+	{
+		return orgname;
+	}
+
+
+	
+	/**
+	 * @param orgname the orgname to set
+	 */
+	public void setOrgname( String orgname )
+	{
+		this.orgname = orgname;
+	}
 }
