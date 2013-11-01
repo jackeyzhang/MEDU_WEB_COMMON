@@ -7,7 +7,7 @@ import com.sickle.dao.ClassesDaoService;
 import com.sickle.dao.OrgDaoService;
 import com.sickle.dao.SchoolDaoService;
 import com.sickle.dao.StudentDaoService;
-import com.sickle.dao.TeacherDaoService;
+import com.sickle.dao.MemberDaoService;
 
 
 /**
@@ -43,7 +43,7 @@ public class ClearTableService
 		sservice.getSession( ).createQuery( "delete from School where id>0" ).executeUpdate( );
 		sservice.getSession( ).beginTransaction( ).commit( );
 		
-		TeacherDaoService tservice = new TeacherDaoService();
+		MemberDaoService tservice = new MemberDaoService();
 		tservice.getSession( ).beginTransaction( );
 		tservice.getSession( ).createQuery( "delete from Teacher where id>0" ).executeUpdate( );
 		tservice.getSession( ).beginTransaction( ).commit( );

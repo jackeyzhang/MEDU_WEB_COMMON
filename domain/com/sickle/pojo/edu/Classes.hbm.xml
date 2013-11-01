@@ -8,8 +8,8 @@
             <column name="id" />
             <generator class="identity" />
         </id>
-        <many-to-one name="teacher" class="com.sickle.pojo.edu.Teacher" fetch="select">
-            <column name="teacherid" />
+        <many-to-one name="member" class="com.sickle.pojo.edu.Member" fetch="select">
+            <column name="memberid" />
         </many-to-one>
         <many-to-one name="school" class="com.sickle.pojo.edu.School" fetch="select">
             <column name="schoolid" />
@@ -22,7 +22,7 @@
         </property>
         <set name="students" table="student" inverse="true" lazy="true" fetch="select">
             <key>
-                <column name="classId"/>
+                <column name="classid"/>
             </key>
             <one-to-many class="com.sickle.pojo.edu.Student" />
         </set>

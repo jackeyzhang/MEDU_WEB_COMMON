@@ -3,7 +3,7 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated 2013-7-15 16:44:17 by Hibernate Tools 3.4.0.CR1 -->
 <hibernate-mapping>
-    <class name="com.sickle.pojo.edu.Teacher" table="teacher" catalog="medu">
+    <class name="com.sickle.pojo.edu.Member" table="member" catalog="medu">
         <id name="id" type="java.lang.Integer">
             <column name="id" />
             <generator class="identity" />
@@ -22,9 +22,6 @@
         </property>
         <property name="email" type="string">
             <column name="email" length="45" not-null="true" />
-        </property>
-        <property name="workage" type="java.lang.Integer">
-            <column name="workage" />
         </property>
         <property name="grade" type="java.lang.Float">
             <column name="grade" precision="12" scale="0" />
@@ -49,7 +46,7 @@
         </property>
         <set name="classeses" table="classes" inverse="true" lazy="true" fetch="select">
             <key>
-                <column name="teacherid" not-null="true" />
+                <column name="memberid" not-null="true" />
             </key>
             <one-to-many class="com.sickle.pojo.edu.Classes" />
         </set>

@@ -4,8 +4,8 @@
 
 package com.sickle.dao.test;
 
-import com.sickle.dao.NoticeDaoService;
-import com.sickle.pojo.edu.Notice;
+import com.sickle.dao.ClassesDaoService;
+import com.sickle.pojo.edu.Classes;
 
 /**
  * 清掉所有表
@@ -36,26 +36,29 @@ public class TestDaoService
 
 			sservice.save( school );
 		}
-
+*/
 		
-		TeacherDaoService tservice = new TeacherDaoService( );
+	/*	MemberDaoService tservice = new MemberDaoService( );
 		for(int i = 0;i < 20;i++)
 		{
-			Teacher t = new Teacher("老师名字"+ i,"email"+ i +"@139.com","登录名","密码");
-			tservice.addTeacher( t );
+			Member t = new Member("老师名字"+ i,"email"+ i +"@139.com","登录名","密码");
+			t.setResume( "个人简历" + i );
+			t.setOrgname( "公司名称" + i);
+			t.setTitle( "title" +  i );
+			tservice.addMember( t );
 		}*/
 		
-//		ClassesDaoService cservice = new ClassesDaoService();
-//		for(int i = 0;i < 30;i++ )
-//		{
-//			Classes c = new Classes();
-//			c.setName( "XX课程"+ i );
-//			c.setClasstime( "每周五" );
-//			cservice.addClasses( c );
-//		}
+		ClassesDaoService cservice = new ClassesDaoService();
+		for(int i = 0;i < 30;i++ )
+		{
+			Classes c = new Classes();
+			c.setName( "XX课程"+ i );
+			c.setClasstime( "每周五" );
+			cservice.addClasses( c );
+		}
+//		
 		
-		
-		NoticeDaoService cservice = new NoticeDaoService();
+		/*NoticeDaoService cservice = new NoticeDaoService();
 		for(int i = 0;i < 30;i++ )
 		{
 			Notice notice = new Notice();
@@ -65,7 +68,7 @@ public class TestDaoService
 			notice.setAddress( "notice address:" + i );
 			notice.setDatedesc( "1/2/3 per week: " + i );
 			cservice.addNotice( notice );
-		}
+		}*/
 		
 //		TeacherDaoService tservice = new TeacherDaoService( );
 //		tservice.getSession( ).beginTransaction( );

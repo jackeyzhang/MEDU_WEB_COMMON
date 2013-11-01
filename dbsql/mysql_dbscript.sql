@@ -67,14 +67,13 @@ CREATE TABLE `student` (
 
 delimiter $$
 
-CREATE TABLE `teacher` (
+CREATE TABLE `member` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(45) NOT NULL,
   `sex` varchar(4) DEFAULT NULL,
   `hobby` varchar(200) DEFAULT NULL,
   `contact` varchar(45) DEFAULT NULL,
   `email` varchar(45) NOT NULL,
-  `workage` int(11) DEFAULT NULL,
   `grade` float DEFAULT NULL,
   `openStatus` int(11) DEFAULT NULL,
   `loginName` varchar(45) NOT NULL,
@@ -83,7 +82,7 @@ CREATE TABLE `teacher` (
   `orgname` varchar(20) NOT NULL,
   `title` varchar(10) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8 COMMENT='老师信息'$$
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8 COMMENT='会员信息'$$
 
 
 delimiter $$

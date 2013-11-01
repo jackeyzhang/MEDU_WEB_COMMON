@@ -14,7 +14,7 @@ public class Classes implements java.io.Serializable
 	@Reflect_Field(type = FieldType.Integer,isId = true)
 	private Integer id;
 	@Reflect_Field(title="老师")
-	private Teacher teacher;
+	private Member member;
 	@Reflect_Field(title="学校")
 	private School school;
 	@Reflect_Field(title="名字")
@@ -27,16 +27,16 @@ public class Classes implements java.io.Serializable
 	{
 	}
 
-	public Classes( Teacher teacher, School school )
+	public Classes( Member member, School school )
 	{
-		this.teacher = teacher;
+		this.member = member;
 		this.school = school;
 	}
 
-	public Classes( Teacher teacher, School school, String name,
+	public Classes( Member member, School school, String name,
 			String classtime, Set<Student> students )
 	{
-		this.teacher = teacher;
+		this.member = member;
 		this.school = school;
 		this.name = name;
 		this.classtime = classtime;
@@ -53,14 +53,14 @@ public class Classes implements java.io.Serializable
 		this.id = id;
 	}
 
-	public Teacher getTeacher( )
+	public Member getMember( )
 	{
-		return this.teacher;
+		return this.member;
 	}
 
-	public void setTeacher( Teacher teacher )
+	public void setMember( Member member )
 	{
-		this.teacher = teacher;
+		this.member = member;
 	}
 
 	public School getSchool( )

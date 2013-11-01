@@ -10,16 +10,16 @@ import java.util.Set;
 
 import com.sickle.pojo.edu.Classes;
 import com.sickle.pojo.edu.Student;
-import com.sickle.pojo.edu.Teacher;
+import com.sickle.pojo.edu.Member;
 
 /**
  * @author chenhao
  * 
  */
-public class TeacherDTO
+public class MemberDTO
 {
 
-	public Teacher to( Teacher teacher )
+	public Member to( Member teacher )
 	{
 		Set<Classes> classes = new HashSet<Classes>( 0 );
 		for ( Classes clss : teacher.getClasseses( ) )
@@ -37,9 +37,9 @@ public class TeacherDTO
 		return teacher;
 	}
 
-	public List<Teacher> to( List<Teacher> teachers )
+	public List<Member> to( List<Member> teachers )
 	{
-		for ( Teacher teacher : teachers )
+		for ( Member teacher : teachers )
 		{
 			to( teacher );
 		}
