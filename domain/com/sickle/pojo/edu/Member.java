@@ -12,7 +12,7 @@ public class Member implements java.io.Serializable
 	private static final long serialVersionUID = -6913802896040250403L;
 	@Reflect_Field(type = FieldType.Integer,isId = true)
 	private Integer id;
-	@Reflect_Field(title="名字",reqiured = true,mask = 15)
+	@Reflect_Field(title="名字",reqiured = true)
 	private String name;
 	@Reflect_Field(title="性别",reqiured = true)
 	private String sex;
