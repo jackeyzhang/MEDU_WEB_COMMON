@@ -65,8 +65,9 @@ public class MemberDaoService extends HibernateSupport<Member> implements
 
 	@Override
 	public Member getMemberByLoginName(String name) {
-		Query query = getSession().createQuery("from Member where name = ? ");
+		Query query = getSession().createQuery("from Member where name = ? or email = ? ");
 		query.setString(0, name);
+		query.setString(1, name);
 		if (query.list() == null || query.list().size() == 0) {
 			return null;
 		}
