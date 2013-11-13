@@ -4,8 +4,8 @@
 
 package com.sickle.dao.test;
 
-import com.sickle.dao.ClassesDaoService;
-import com.sickle.pojo.edu.Classes;
+import com.sickle.dao.MemberDaoService;
+import com.sickle.pojo.edu.Member;
 
 /**
  * 清掉所有表
@@ -38,25 +38,24 @@ public class TestDaoService
 		}
 */
 		
-	/*	MemberDaoService tservice = new MemberDaoService( );
+		MemberDaoService tservice = new MemberDaoService( );
 		for(int i = 0;i < 20;i++)
 		{
-			Member t = new Member("老师名字"+ i,"email"+ i +"@139.com","登录名","密码");
+			Member t = new Member("老师"+ i,"email"+ i +"@139.com","登录名","密码");
 			t.setResume( "个人简历" + i );
 			t.setOrgname( "公司名称" + i);
 			t.setTitle( "title" +  i );
 			tservice.addMember( t );
-		}*/
-		
-		ClassesDaoService cservice = new ClassesDaoService();
-		for(int i = 0;i < 30;i++ )
-		{
-			Classes c = new Classes();
-			c.setName( "XX课程"+ i );
-			c.setClasstime( "每周五" );
-			cservice.addClasses( c );
 		}
-//		
+		
+//		ClassesDaoService cservice = new ClassesDaoService();
+//		for(int i = 0;i < 30;i++ )
+//		{
+//			Classes c = new Classes();
+//			c.setName( "XX课程"+ i );
+//			c.setClasstime( "每周五" );
+//			cservice.addClasses( c );
+//		}
 		
 		/*NoticeDaoService cservice = new NoticeDaoService();
 		for(int i = 0;i < 30;i++ )

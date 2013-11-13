@@ -44,6 +44,17 @@
         <property name="title" type="string">
             <column name="title" length="10" not-null="true" />
         </property>
+        
+        <property name="character" type="string">
+            <column name="chara" length="20" not-null="true" />
+        </property>
+        <property name="city" type="string">
+            <column name="city" length="20" />
+        </property>
+        <property name="area" type="string">
+            <column name="area" length="20" />
+        </property>
+        
         <set name="classeses" table="classes" inverse="true" lazy="true" fetch="select">
             <key>
                 <column name="memberid" not-null="true" />

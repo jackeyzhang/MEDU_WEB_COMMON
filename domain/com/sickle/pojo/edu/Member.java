@@ -12,30 +12,52 @@ public class Member implements java.io.Serializable
 	private static final long serialVersionUID = -6913802896040250403L;
 	@Reflect_Field(type = FieldType.Integer,isId = true)
 	private Integer id;
-	@Reflect_Field(title="名字",reqiured = true)
+	
+	@Reflect_Field(title="称谓",reqiured = true)
 	private String name;
+	
 	@Reflect_Field(title="性别",reqiured = true)
 	private String sex;
-	@Reflect_Field(title="爱好")
-	private String hobby;
-	@Reflect_Field(title="联系方式",type=FieldType.Mobile,reqiured = true)
-	private String contact;
+	
 	@Reflect_Field(title="电子邮箱",type=FieldType.Email,reqiured = true)
 	private String email;
-	@Reflect_Field(title="级别",type=FieldType.Float)
-	private Float grade;
-	@Reflect_Field(title="开放状态",type=FieldType.Integer)
-	private Integer openStatus;
+
 	@Reflect_Field(title="登陆名字",reqiured = true,mask = 15)
 	private String loginName;
+	
 	@Reflect_Field(title="密码",reqiured = true,type = FieldType.Password)
 	private String password;
-	@Reflect_Field(title="个人介绍",reqiured = true)
+	
+	@Reflect_Field(title="爱好")
+	private String hobby;
+	
+	@Reflect_Field(title="身份")
+	private String character = "normal";
+	
+	@Reflect_Field(title="联系方式",type=FieldType.Mobile,reqiured = true)
+	private String contact;
+	
+	@Reflect_Field(title="简历",reqiured = true)
 	private String resume;
+	
 	@Reflect_Field(title="工作单位",reqiured = true)
 	private String orgname;
+	
 	@Reflect_Field(title="职位",reqiured = true)
 	private String title;
+	
+	@Reflect_Field(title="城市",reqiured = true)
+	private String city;
+	
+	@Reflect_Field(title="区域",reqiured = true)
+	private String area;
+	
+	@Reflect_Field(title="开放状态",type=FieldType.Integer)
+	private Integer openStatus;
+	
+	@Reflect_Field(title="级别",type=FieldType.Float)
+	private Float grade;
+	
 	private Set<Classes> classeses = new HashSet<Classes>( 0 );
 
 	public Member( )
@@ -234,4 +256,59 @@ public class Member implements java.io.Serializable
 		this.title = title;
 	}
 
+	
+	/**
+	 * @return the character
+	 */
+	public String getCharacter( )
+	{
+		return character;
+	}
+
+	
+	/**
+	 * @param character the character to set
+	 */
+	public void setCharacter( String character )
+	{
+		this.character = character;
+	}
+
+	
+	/**
+	 * @return the city
+	 */
+	public String getCity( )
+	{
+		return city;
+	}
+
+	
+	/**
+	 * @param city the city to set
+	 */
+	public void setCity( String city )
+	{
+		this.city = city;
+	}
+
+	
+	/**
+	 * @return the area
+	 */
+	public String getArea( )
+	{
+		return area;
+	}
+
+	
+	/**
+	 * @param area the area to set
+	 */
+	public void setArea( String area )
+	{
+		this.area = area;
+	}
+
+	
 }
