@@ -14,9 +14,6 @@
         <property name="name" type="string">
             <column name="name" length="45" not-null="true" />
         </property>
-        <property name="city" type="string">
-            <column name="city" length="45" />
-        </property>
         <property name="loginname" type="string">
             <column name="loginname" length="45" not-null="true" />
         </property>
@@ -28,6 +25,16 @@
                 <column name="schoolid" not-null="true" />
             </key>
             <one-to-many class="com.sickle.pojo.edu.Classes" />
-        </set>
+	        </set>
+	
+		<property name="provinceCity" type="string">
+			<column name="provinceCity" length="45" />
+		</property>
+		<property name="area" type="string">
+			<column name="area" length="45" />
+		</property>
+		<property name="address" type="string">
+			<column name="address" length="45" />
+		</property>
     </class>
 </hibernate-mapping>

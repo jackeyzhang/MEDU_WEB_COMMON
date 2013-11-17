@@ -32,5 +32,11 @@
             </key>
             <one-to-many class="com.sickle.pojo.edu.School" />
         </set>
+        <property name="provinceCity" type="string">
+			<column name="provinceCity" length="45" />
+		</property>
+		<property name="area" type="string">
+			<column name="area" length="45" />
+		</property>
     </class>
 </hibernate-mapping>

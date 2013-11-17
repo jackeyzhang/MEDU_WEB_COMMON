@@ -25,7 +25,10 @@ public class Org implements java.io.Serializable
 	@Reflect_Field(title="密码",type = FieldType.Password)
 	private String password;
 	private Set<School> schools = new HashSet<School>( 0 );
-
+	@Reflect_Field(title="所在省市")
+	private String provinceCity;
+	@Reflect_Field(title="地区")
+	private String area;
 	public Org( )
 	{
 	}
@@ -134,4 +137,19 @@ public class Org implements java.io.Serializable
 		this.schools = schools;
 	}
 
+	public String getProvinceCity() {
+		return provinceCity;
+	}
+
+	public void setProvinceCity(String provinceCity) {
+		this.provinceCity = provinceCity;
+	}
+
+	public String getArea() {
+		return area;
+	}
+
+	public void setArea(String area) {
+		this.area = area;
+	}
 }

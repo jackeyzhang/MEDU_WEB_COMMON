@@ -15,13 +15,17 @@ public class School implements java.io.Serializable
 	private Org org;
 	@Reflect_Field(title="名字")
 	private String name;
-	@Reflect_Field(title="所在城市")
-	private String city;
 	@Reflect_Field(title="登陆名字")
 	private String loginname;
 	@Reflect_Field(title="密码")
 	private String password;
 	private Set<Classes> classeses = new HashSet<Classes>( 0 );
+	@Reflect_Field(title="所在省市")
+	private String provinceCity;
+	@Reflect_Field(title="地区")
+	private String area;
+	@Reflect_Field(title="地址")
+	private String address;
 
 	public School( )
 	{
@@ -33,12 +37,12 @@ public class School implements java.io.Serializable
 		this.loginname = loginname;
 	}
 
-	public School( Org org, String name, String city, String loginname,
+	public School( Org org, String name, String provinceCity, String loginname,
 			String password, Set<Classes> classeses )
 	{
 		this.org = org;
 		this.name = name;
-		this.city = city;
+		this.provinceCity = provinceCity;
 		this.loginname = loginname;
 		this.password = password;
 		this.classeses = classeses;
@@ -74,16 +78,6 @@ public class School implements java.io.Serializable
 		this.name = name;
 	}
 
-	public String getCity( )
-	{
-		return this.city;
-	}
-
-	public void setCity( String city )
-	{
-		this.city = city;
-	}
-
 	public String getLoginname( )
 	{
 		return this.loginname;
@@ -114,4 +108,27 @@ public class School implements java.io.Serializable
 		this.classeses = classeses;
 	}
 
+	public String getProvinceCity() {
+		return provinceCity;
+	}
+
+	public void setProvinceCity(String provinceCity) {
+		this.provinceCity = provinceCity;
+	}
+
+	public String getArea() {
+		return area;
+	}
+
+	public void setArea(String area) {
+		this.area = area;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
 }
