@@ -16,6 +16,9 @@ public class Member implements java.io.Serializable
 	@Reflect_Field(title="称谓",reqiured = true)
 	private String name;
 	
+	@Reflect_Field(title="头像",reqiured = true)
+	private String icon;
+	
 	@Reflect_Field(title="性别",reqiured = true)
 	private String sex;
 	
@@ -308,6 +311,24 @@ public class Member implements java.io.Serializable
 	public void setArea( String area )
 	{
 		this.area = area;
+	}
+
+	
+	/**
+	 * @return the icon
+	 */
+	public String getIcon( )
+	{
+		return icon;
+	}
+
+	
+	/**
+	 * @param icon the icon to set
+	 */
+	public void setIcon( String icon )
+	{
+		this.icon = icon;
 	}
 
 	
