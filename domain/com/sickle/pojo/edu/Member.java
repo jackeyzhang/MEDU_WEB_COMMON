@@ -332,4 +332,9 @@ public class Member implements java.io.Serializable
 	}
 
 	
+	public boolean isTeacher()
+	{
+		return this.character.equalsIgnoreCase("teacher" );
+	}
+	
 }
