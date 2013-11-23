@@ -12,7 +12,7 @@
             <column name="name" length="45" not-null="true" />
         </property>
         <property name="icon" type="string">
-            <column name="icon" length="45" not-null="true" />
+            <column name="icon" length="45"/>
         </property>
         <property name="sex" type="string">
             <column name="sex" length="4" />

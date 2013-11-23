@@ -39,13 +39,14 @@ public class TestDaoService
 */
 		
 		MemberDaoService tservice = new MemberDaoService( );
-		for(int i = 0;i < 20;i++)
+		for(int i = 0;i < 1;i++)
 		{
 			Member t = new Member("老师"+ i,"email"+ i +"@139.com","登录名","密码");
 			t.setResume( "个人简历" + i );
 			t.setOrgname( "公司名称" + i);
 			t.setTitle( "title" +  i );
 			tservice.addMember( t );
+			System.out.println("congratulation "+ t.getLoginName());
 		}
 		
 //		ClassesDaoService cservice = new ClassesDaoService();
