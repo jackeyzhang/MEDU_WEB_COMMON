@@ -29,6 +29,8 @@ public class Notice implements java.io.Serializable
 	
 	private boolean passed;//是否审核通过
 	
+	
+	
 	public Notice(){}
 	
 	
