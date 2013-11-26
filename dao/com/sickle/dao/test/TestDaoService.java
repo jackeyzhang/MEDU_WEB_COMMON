@@ -4,8 +4,12 @@
 
 package com.sickle.dao.test;
 
-import com.sickle.dao.MemberDaoService;
-import com.sickle.pojo.edu.Member;
+
+
+import java.util.Date;
+
+import com.sickle.dao.MessageDaoService;
+import com.sickle.pojo.website.Message;
 
 /**
  * 清掉所有表
@@ -38,7 +42,7 @@ public class TestDaoService
 		}
 */
 		
-		MemberDaoService tservice = new MemberDaoService( );
+		/*MemberDaoService tservice = new MemberDaoService( );
 		for(int i = 0;i < 1;i++)
 		{
 			Member t = new Member("老师"+ i,"email"+ i +"@139.com","登录名","密码");
@@ -47,7 +51,7 @@ public class TestDaoService
 			t.setTitle( "title" +  i );
 			tservice.addMember( t );
 			System.out.println("congratulation "+ t.getLoginName());
-		}
+		}*/
 		
 //		ClassesDaoService cservice = new ClassesDaoService();
 //		for(int i = 0;i < 30;i++ )
@@ -87,6 +91,10 @@ public class TestDaoService
 		// cservice.getSession( ).createQuery( "delete from Classes where id>0"
 		// ).executeUpdate( );
 		// cservice.getSession( ).beginTransaction( ).commit( );
+		
+		MessageDaoService s = new MessageDaoService();
+		Message message = new Message(1,2,"n", new Date(),"c","t","y");
+		s.addMessage( message );
 	}
 
 }

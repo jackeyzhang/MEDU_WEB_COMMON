@@ -8,17 +8,17 @@
             <column name="id" />
             <generator class="identity" />
         </id>
-        <property name="from" type="int">
-            <column name="from" not-null="true" />
+        <property name="send" type="java.lang.Integer">
+            <column name="send" not-null="true" />
         </property>
-        <property name="to" type="int">
-            <column name="to" not-null="true" />
+        <property name="receiver" type="java.lang.Integer">
+            <column name="receiver" not-null="true" />
         </property>
         <property name="hasread" type="string">
             <column name="hasread" length="2" />
         </property>
-        <property name="date" type="timestamp">
-            <column name="date" length="19" />
+        <property name="receivetime" type="date">
+            <column name="receivetime" sql-type="datetime"/>
         </property>
         <property name="content" type="string">
             <column name="content" length="4500" />

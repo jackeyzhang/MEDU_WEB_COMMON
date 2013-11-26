@@ -11,18 +11,24 @@ package com.sickle.uireflect;
  * 
  */
 public enum Mask {
-
-	everywhere(0),
+	
+	nevershow(-1),
 
 	showInList(1),
 
 	showInEdit(2),
 
-	showInAdd(4), // show all 7
+	showInAdd(4), 
+	
+	showAll(7),// show all 7
 
-	enInAdd(8),//show all and enable only add 15
+	enInAdd(8),//enable only add 15
 
-	enInEdit(16);//show all and enable only edit 23
+	enInEdit(16),//enable only edit 23
+	
+	enAll(24),//enable all
+	
+	All(31);//show and enable all
 
 	private int value;
 

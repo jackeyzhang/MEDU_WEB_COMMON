@@ -12,13 +12,15 @@
   <property name="hibernate.connection.username">root</property>
   <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
   <property name="hibernate.search.autoregister_listeners">false</property>
+  
   <mapping resource="com/sickle/pojo/edu/Student.hbm.xml"/>
   <mapping resource="com/sickle/pojo/edu/Member.hbm.xml"/>
   <mapping resource="com/sickle/pojo/edu/Classes.hbm.xml"/>
-  <mapping resource="com/sickle/pojo/website/Message.hbm.xml"/>
   <mapping resource="com/sickle/pojo/edu/Org.hbm.xml"/>
-  <mapping resource="com/sickle/pojo/website/WebUi.hbm.xml"/>
   <mapping resource="com/sickle/pojo/edu/School.hbm.xml"/>
   <mapping resource="com/sickle/pojo/edu/Notice.hbm.xml"/>
+  
+  <mapping resource="com/sickle/pojo/website/Message.hbm.xml"/>
+  <mapping resource="com/sickle/pojo/website/WebUi.hbm.xml"/>
  </session-factory>
 </hibernate-configuration>

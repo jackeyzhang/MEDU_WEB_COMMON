@@ -35,6 +35,8 @@ public enum FieldType {
 	
 	Mobile,
 	
-	Email;
+	Email,
+	
+	TextArea;
 
 }

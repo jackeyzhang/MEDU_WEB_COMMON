@@ -42,12 +42,6 @@ public @interface Reflect_Field
 	 */
 	FieldType type() default FieldType.String;
 	
-	/**
-	 * 是否展示在界面上
-	 * 
-	 * @return
-	 */
-	boolean isshow() default true;
 	
 	/**
 	 * 界面上的title
@@ -71,6 +65,6 @@ public @interface Reflect_Field
 	 * 
 	 * @return
 	 */
-	int mask() default 0;
+	int mask() default 31;
 	
 }
