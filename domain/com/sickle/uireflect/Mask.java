@@ -12,7 +12,7 @@ package com.sickle.uireflect;
  */
 public enum Mask {
 	
-	nevershow(-1),
+	nevershow(0),
 
 	showInList(1),
 
