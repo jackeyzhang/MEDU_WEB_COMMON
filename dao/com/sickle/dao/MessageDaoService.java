@@ -66,7 +66,7 @@ public class MessageDaoService extends HibernateSupport<Message> implements IMes
 	@Override
 	public List<Message> getMessageByUserId( Integer userid )
 	{
-		Query query = getSession( ).createQuery( "from Message where receiver = ? " );
+		Query query = getSession( ).createQuery( "from Message where receiver > ? " );
 		query.setInteger( 0, userid );
 		if(query.list( ) == null || query.list( ).size( ) == 0 )
 		{
