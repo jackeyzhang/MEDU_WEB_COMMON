@@ -12,22 +12,22 @@ public class Cls implements java.io.Serializable
 	
 	private static final long serialVersionUID = -5929960522288754395L;
 
-	@Reflect_Field(type = FieldType.Integer,isId = true)
+	@Reflect_Field(index=0,type = FieldType.Integer,isId = true)
 	private Integer id;
 	
-	@Reflect_Field(title="名称",reqiured = true)
+	@Reflect_Field(index=1,title="名称",reqiured = true)
 	private String name;
 	
-	@Reflect_Field(title="授课老师",reqiured = true)
+	@Reflect_Field(index=2,title="授课老师",reqiured = true)
 	private String teachername;
 	
-	@Reflect_Field(title="老师联系方式",type=FieldType.Mobile)
+	@Reflect_Field(index=3,title="老师联系方式",type=FieldType.Mobile)
 	private String contact;
 	
-	@Reflect_Field(title="授课时间")
+	@Reflect_Field(index=4,title="授课时间")
 	private String classtime;
 	
-	@Reflect_Field(title="授课地址")
+	@Reflect_Field(index=5,title="授课地址")
 	private String classaddress;
 	
 	private Set<Member> students = new HashSet<Member>( 0 );

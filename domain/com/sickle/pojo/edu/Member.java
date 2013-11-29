@@ -13,13 +13,13 @@ public class Member implements java.io.Serializable
 	@Reflect_Field(type = FieldType.Integer,isId = true)
 	private Integer id;
 	
-	@Reflect_Field(title="称谓",reqiured = true)
+	@Reflect_Field(index=0,title="称谓",reqiured = true)
 	private String name;
 	
-	@Reflect_Field(title="头像",reqiured = true)
+	@Reflect_Field(index=1,title="头像",reqiured = true)
 	private String icon;
 	
-	@Reflect_Field(title="性别",reqiured = true)
+	@Reflect_Field(index=2,title="性别",reqiured = true)
 	private String sex;
 	
 	@Reflect_Field(title="电子邮箱",type=FieldType.Email,reqiured = true)

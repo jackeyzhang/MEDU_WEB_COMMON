@@ -30,10 +30,10 @@ public class Message implements java.io.Serializable
 	@Reflect_Field(title="接收时间",type=FieldType.DateTime,mask= 1)
 	private Date receivetime;
 	
-	@Reflect_Field(title="内容",type=FieldType.TextArea)
+	@Reflect_Field(index=1,title="内容",type=FieldType.TextArea)
 	private String content;
 	
-	@Reflect_Field(title="标题",mask= 15)
+	@Reflect_Field(index=0,title="标题",mask= 15)
 	private String title;
 	
 	@Reflect_Field(title="类型",mask= 1)
