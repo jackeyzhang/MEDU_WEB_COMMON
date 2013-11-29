@@ -21,13 +21,13 @@ public class Cls implements java.io.Serializable
 	@Reflect_Field(title="授课老师",reqiured = true)
 	private String teachername;
 	
-	@Reflect_Field(title="老师联系方式",type=FieldType.Mobile,reqiured = true)
+	@Reflect_Field(title="老师联系方式",type=FieldType.Mobile)
 	private String contact;
 	
-	@Reflect_Field(title="授课时间",reqiured = true)
+	@Reflect_Field(title="授课时间")
 	private String classtime;
 	
-	@Reflect_Field(title="授课地址",reqiured = true)
+	@Reflect_Field(title="授课地址")
 	private String classaddress;
 	
 	private Set<Member> students = new HashSet<Member>( 0 );
@@ -35,7 +35,6 @@ public class Cls implements java.io.Serializable
 	public Cls( )
 	{
 	}
-	
 	
 	/**
 	 * @param name

@@ -25,17 +25,24 @@ public class ClsDTO
 		for ( Member stu : classes.getStudents( ) )
 		{
 			stus.add( stu );
+			
+			Set<Cls> clss = new HashSet<Cls>();
+			for( Cls stucls : stu.getClasseses( ) )
+			{
+				clss.add( stucls );
+			}
+			stu.setClasseses( clss );
 		}
 		classes.setStudents( stus );
 		return classes;
 	}
 
-	public List<Cls> to( List<Cls> Clss )
+	public List<Cls> to( List<Cls> classes )
 	{
-		for ( Cls Cls : Clss )
+		for ( Cls cls : classes )
 		{
-			to(Cls);
+			to(cls);
 		}
-		return Clss;
+		return classes;
 	}
 }
