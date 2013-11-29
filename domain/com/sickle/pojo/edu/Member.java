@@ -24,9 +24,6 @@ public class Member implements java.io.Serializable
 	
 	@Reflect_Field(title="电子邮箱",type=FieldType.Email,reqiured = true)
 	private String email;
-
-	@Reflect_Field(title="登陆名字",reqiured = true,mask = 15)
-	private String loginName;
 	
 	@Reflect_Field(title="密码",reqiured = true,type = FieldType.Password)
 	private String password;
@@ -61,24 +58,23 @@ public class Member implements java.io.Serializable
 	@Reflect_Field(title="级别",type=FieldType.Float)
 	private Float grade;
 	
-	private Set<Classes> classeses = new HashSet<Classes>( 0 );
+	private Set<Cls> classeses = new HashSet<Cls>( 0 );
 
 	public Member( )
 	{
 	}
 
-	public Member( String name, String email, String loginName, String password )
+	public Member( String name, String email, String password )
 	{
 		this.name = name;
 		this.email = email;
-		this.loginName = loginName;
 		this.password = password;
 	}
 
 	public Member( String name, String sex, String hobby, String contact,
 			String email, Float grade, Integer openStatus,
-			String loginName, String password, String resume,String orgname,
-			String title,Set<Classes> classeses )
+			String password, String resume,String orgname,
+			String title,Set<Cls> classeses )
 	{
 		this.name = name;
 		this.sex = sex;
@@ -87,7 +83,6 @@ public class Member implements java.io.Serializable
 		this.email = email;
 		this.grade = grade;
 		this.openStatus = openStatus;
-		this.loginName = loginName;
 		this.password = password;
 		this.resume = resume;
 		this.orgname = orgname;
@@ -175,16 +170,6 @@ public class Member implements java.io.Serializable
 		this.openStatus = openStatus;
 	}
 
-	public String getLoginName( )
-	{
-		return this.loginName;
-	}
-
-	public void setLoginName( String loginName )
-	{
-		this.loginName = loginName;
-	}
-
 	public String getPassword( )
 	{
 		return this.password;
@@ -194,18 +179,25 @@ public class Member implements java.io.Serializable
 	{
 		this.password = password;
 	}
-
-	public Set<Classes> getClasseses( )
+	
+	
+	/**
+	 * @return the classeses
+	 */
+	public Set<Cls> getClasseses( )
 	{
-		return this.classeses;
+		return classeses;
 	}
 
-	public void setClasseses( Set<Classes> classeses )
+	
+	/**
+	 * @param classeses the classeses to set
+	 */
+	public void setClasseses( Set<Cls> classeses )
 	{
 		this.classeses = classeses;
 	}
 
-	
 	/**
 	 * @return the resume
 	 */

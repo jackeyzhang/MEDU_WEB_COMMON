@@ -8,8 +8,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import com.sickle.pojo.edu.Classes;
-import com.sickle.pojo.edu.Student;
+import com.sickle.pojo.edu.Cls;
 import com.sickle.pojo.edu.Member;
 
 /**
@@ -21,12 +20,12 @@ public class MemberDTO
 
 	public Member to( Member teacher )
 	{
-		Set<Classes> classes = new HashSet<Classes>( 0 );
-		for ( Classes clss : teacher.getClasseses( ) )
+		Set<Cls> classes = new HashSet<Cls>( 0 );
+		for ( Cls clss : teacher.getClasseses( ) )
 		{
-			Set<Student> stus = new HashSet<Student>( );
+			Set<Member> stus = new HashSet<Member>( );
 
-			for ( Student stu : clss.getStudents( ) )
+			for ( Member stu : clss.getStudents( ) )
 			{
 				stus.add( stu );
 			}

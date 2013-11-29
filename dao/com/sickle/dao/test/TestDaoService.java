@@ -6,10 +6,9 @@ package com.sickle.dao.test;
 
 
 
-import java.util.Date;
-
-import com.sickle.dao.MessageDaoService;
-import com.sickle.pojo.website.Message;
+import com.sickle.dao.ClsDaoService;
+import com.sickle.pojo.edu.Cls;
+import com.sickle.pojo.edu.Member;
 
 /**
  * 清掉所有表
@@ -92,9 +91,32 @@ public class TestDaoService
 		// ).executeUpdate( );
 		// cservice.getSession( ).beginTransaction( ).commit( );
 		
-		MessageDaoService s = new MessageDaoService();
-		Message message = new Message(1,2,"n", new Date(),"c","t","y");
-		s.addMessage( message );
+//		MessageDaoService s = new MessageDaoService();
+//		Message message = new Message(1,2,"n", new Date(),"c","t","y");
+//		s.addMessage( message );
+		
+		ClsDaoService clsdao = new ClsDaoService();
+		
+		Cls cl = new Cls();
+		cl.setName( "周三语文课" );
+		cl.setClasstime( "时间描述" );
+		cl.setContact( "362365332" );
+		cl.setTeachername( "张老师" );
+		cl.setClassaddress( "浦东新区张杨路123号" );
+		
+		Member member = new Member();
+		member.setName( "魏斌斌" );
+		member.setCity( "上海" );
+		member.setEmail( "zhangchenhao@139.com" );
+		member.setTitle( "学生" );
+		member.setPassword( "123" );
+		member.setResume( "resume" );
+		member.setOrgname( "orgname" );
+		
+		cl.getStudents( ).add( member );
+		
+		clsdao.addCls( cl );
+		
 	}
 
 }

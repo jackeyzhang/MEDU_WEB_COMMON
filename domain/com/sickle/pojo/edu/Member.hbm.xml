@@ -32,20 +32,17 @@
         <property name="openStatus" type="java.lang.Integer">
             <column name="openStatus" />
         </property>
-        <property name="loginName" type="string">
-            <column name="loginName" length="45" not-null="true" />
-        </property>
         <property name="password" type="string">
             <column name="password" length="45" not-null="true" />
         </property>
          <property name="resume" type="string">
-            <column name="resume" length="50" not-null="true" />
+            <column name="resume" length="50"  />
         </property>
         <property name="orgname" type="string">
-            <column name="orgname" length="20" not-null="true" />
+            <column name="orgname" length="20"  />
         </property>
         <property name="title" type="string">
-            <column name="title" length="10" not-null="true" />
+            <column name="title" length="10"  />
         </property>
         
         <property name="character" type="string">
@@ -58,11 +55,11 @@
             <column name="area" length="20" />
         </property>
         
-        <set name="classeses" table="classes" inverse="true" lazy="true" fetch="select">
+        <set name="classeses" table="cls_member" cascade="all">
             <key>
-                <column name="memberid" not-null="true" />
+                <column name="member_id" />
             </key>
-            <one-to-many class="com.sickle.pojo.edu.Classes" />
+            <many-to-many class="com.sickle.pojo.edu.Cls"  column="cls_id"/>
         </set>
     </class>
 </hibernate-mapping>

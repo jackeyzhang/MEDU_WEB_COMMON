@@ -1,7 +1,4 @@
 package com.sickle.pojo.edu;
-import java.util.HashSet;
-import java.util.Set;
-
 import com.gwtent.reflection.client.annotations.Reflect_Domain;
 import com.sickle.uireflect.FieldType;
 import com.sickle.uireflect.Reflect_Field;
@@ -19,7 +16,6 @@ public class School implements java.io.Serializable
 	private String loginname;
 	@Reflect_Field(title="密码")
 	private String password;
-	private Set<Classes> classeses = new HashSet<Classes>( 0 );
 	@Reflect_Field(title="所在省市")
 	private String provinceCity;
 	@Reflect_Field(title="地区")
@@ -38,14 +34,13 @@ public class School implements java.io.Serializable
 	}
 
 	public School( Org org, String name, String provinceCity, String loginname,
-			String password, Set<Classes> classeses )
+			String password )
 	{
 		this.org = org;
 		this.name = name;
 		this.provinceCity = provinceCity;
 		this.loginname = loginname;
 		this.password = password;
-		this.classeses = classeses;
 	}
 
 	public Integer getId( )
@@ -96,16 +91,6 @@ public class School implements java.io.Serializable
 	public void setPassword( String password )
 	{
 		this.password = password;
-	}
-
-	public Set<Classes> getClasseses( )
-	{
-		return this.classeses;
-	}
-
-	public void setClasseses( Set<Classes> classeses )
-	{
-		this.classeses = classeses;
 	}
 
 	public String getProvinceCity() {
