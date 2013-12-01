@@ -16,7 +16,7 @@ public class Member implements java.io.Serializable
 	@Reflect_Field(index=0,title="称谓",reqiured = true)
 	private String name;
 	
-	@Reflect_Field(index=1,title="头像",reqiured = true)
+	@Reflect_Field(index=1,title="头像",reqiured = true,mask=14)
 	private String icon;
 	
 	@Reflect_Field(index=2,title="性别",reqiured = true)
@@ -25,37 +25,37 @@ public class Member implements java.io.Serializable
 	@Reflect_Field(title="电子邮箱",type=FieldType.Email,reqiured = true)
 	private String email;
 	
-	@Reflect_Field(title="密码",reqiured = true,type = FieldType.Password)
+	@Reflect_Field(title="密码",reqiured = true,type = FieldType.Password,mask=14)
 	private String password;
 	
-	@Reflect_Field(title="爱好")
+	@Reflect_Field(title="爱好",mask=14)
 	private String hobby;
 	
-	@Reflect_Field(title="身份")
+	@Reflect_Field(title="身份",mask=14)
 	private String character = "normal";
 	
-	@Reflect_Field(title="联系方式",type=FieldType.Mobile,reqiured = true)
+	@Reflect_Field(title="联系方式",type=FieldType.Mobile)
 	private String contact;
 	
-	@Reflect_Field(title="简历",reqiured = true)
+	@Reflect_Field(title="简历")
 	private String resume;
 	
-	@Reflect_Field(title="工作单位",reqiured = true)
+	@Reflect_Field(title="工作单位",mask=14)
 	private String orgname;
 	
-	@Reflect_Field(title="职位",reqiured = true)
+	@Reflect_Field(title="职位",mask=14)
 	private String title;
 	
-	@Reflect_Field(title="城市",reqiured = true)
+	@Reflect_Field(title="城市")
 	private String city;
 	
-	@Reflect_Field(title="区域",reqiured = true)
+	@Reflect_Field(title="区域")
 	private String area;
 	
-	@Reflect_Field(title="开放状态",type=FieldType.Integer)
+	@Reflect_Field(title="开放状态",type=FieldType.Integer,mask=14)
 	private Integer openStatus;
 	
-	@Reflect_Field(title="级别",type=FieldType.Float)
+	@Reflect_Field(title="级别",type=FieldType.Float,mask=14)
 	private Float grade;
 	
 	private Set<Cls> classeses = new HashSet<Cls>( 0 );

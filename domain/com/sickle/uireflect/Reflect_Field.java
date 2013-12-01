@@ -24,7 +24,7 @@ public @interface Reflect_Field
 	 * 顺序
 	 * @return
 	 */
-	int index() default -1 ;
+	int index() default 1000 ;
 	
 	/**
 	 * 是不是id呢
