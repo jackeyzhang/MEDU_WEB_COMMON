@@ -24,14 +24,15 @@ public class ClsDTO
 	
 		for ( Member stu : classes.getStudents( ) )
 		{
-			stus.add( stu );
-			
 			Set<Cls> clss = new HashSet<Cls>();
 			for( Cls stucls : stu.getClasseses( ) )
 			{
+				stucls.setStudents( new HashSet<Member>(0) );
 				clss.add( stucls );
 			}
 			stu.setClasseses( clss );
+			
+			stus.add( stu );
 		}
 		classes.setStudents( stus );
 		return classes;
