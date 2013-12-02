@@ -55,7 +55,7 @@
             <column name="area" length="20" />
         </property>
         
-        <set name="classeses" table="cls_member" cascade="all">
+        <set name="classeses" table="cls_member" inverse="true">
             <key>
                 <column name="member_id" />
             </key>

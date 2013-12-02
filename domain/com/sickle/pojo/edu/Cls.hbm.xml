@@ -25,7 +25,7 @@
             <column name="classaddress" length="145" />
         </property>
         
-        <set name="students" table="cls_member" cascade="all">
+        <set name="students" table="cls_member" inverse="false">
             <key>
                 <column name="cls_id"/>
             </key>

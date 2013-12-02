@@ -328,5 +328,5 @@ public class Member implements java.io.Serializable
 	{
 		return this.character.equalsIgnoreCase("teacher" );
 	}
-	
+
 }

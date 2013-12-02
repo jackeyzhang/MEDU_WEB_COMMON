@@ -39,6 +39,15 @@ public class HibernateSupport<T>{
 		return t;
 	}
 	
+	public T saveorupdate(T t){
+		Session session = getSession();
+		session.beginTransaction();
+		session.saveOrUpdate(t);
+		session.getTransaction().commit();
+		session.close();
+		return t;
+	}
+	
 	public Session getSession(){
 		return SessionManager.getInstance().getSession();
 	}
