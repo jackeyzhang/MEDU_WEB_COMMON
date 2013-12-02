@@ -213,5 +213,15 @@ public class Cls implements java.io.Serializable
 		this.students = students;
 	}
 
-	
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString( )
+	{
+		return "Cls [id=" + id + ", name=" + name + ", teachername="
+				+ teachername + ", contact=" + contact + ", classtime="
+				+ classtime + ", classaddress=" + classaddress + ", students="
+				+ students + "]";
+	}
 }

@@ -18,22 +18,22 @@ import com.sickle.pojo.edu.Member;
 public class MemberDTO
 {
 
-	public Member to( Member teacher )
+	public Member to( Member member )
 	{
 		Set<Cls> classes = new HashSet<Cls>( 0 );
-		for ( Cls clss : teacher.getClasseses( ) )
+		for ( Cls clss : member.getClasseses( ) )
 		{
 			Set<Member> stus = new HashSet<Member>( );
-
 			for ( Member stu : clss.getStudents( ) )
 			{
+				stu.setClasseses( new HashSet<Cls>(0) );
 				stus.add( stu );
 			}
 			clss.setStudents( stus );
 			classes.add( clss );
 		}
-		teacher.setClasseses( classes );
-		return teacher;
+		member.setClasseses( classes );
+		return member;
 	}
 
 	public List<Member> to( List<Member> teachers )
