@@ -29,6 +29,9 @@ public class Org implements java.io.Serializable
 	private String provinceCity;
 	@Reflect_Field(title="地区")
 	private String area;
+	@Reflect_Field(title="简介")
+	private String introduction;
+	
 	public Org( )
 	{
 	}
@@ -152,4 +155,14 @@ public class Org implements java.io.Serializable
 	public void setArea(String area) {
 		this.area = area;
 	}
+
+	public String getIntroduction() {
+		return introduction;
+	}
+
+	public void setIntroduction(String introduction) {
+		this.introduction = introduction;
+	}
+	
+	
 }
