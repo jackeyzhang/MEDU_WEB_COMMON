@@ -59,6 +59,8 @@ public class Member implements java.io.Serializable
 	private Float grade;
 	
 	private Set<Cls> classeses = new HashSet<Cls>( 0 );
+	
+	private Set<Cls> openclasseses = new HashSet<Cls>( 0 );
 
 	public Member( )
 	{
@@ -329,4 +331,23 @@ public class Member implements java.io.Serializable
 		return this.character.equalsIgnoreCase("teacher" );
 	}
 
+	
+	/**
+	 * @return the openclasseses
+	 */
+	public Set<Cls> getOpenclasseses( )
+	{
+		return openclasseses;
+	}
+
+	
+	/**
+	 * @param openclasseses the openclasseses to set
+	 */
+	public void setOpenclasseses( Set<Cls> openclasseses )
+	{
+		this.openclasseses = openclasseses;
+	}
+
+	
 }

@@ -224,4 +224,5 @@ public class Cls implements java.io.Serializable
 				+ classtime + ", classaddress=" + classaddress + ", students="
 				+ students + "]";
 	}
+	
 }

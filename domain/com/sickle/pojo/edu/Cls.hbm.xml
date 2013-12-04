@@ -8,7 +8,6 @@
             <column name="id" />
             <generator class="identity" />
         </id>
-
         <property name="name" type="string">
             <column name="name" length="45" not-null="true" />
         </property>
@@ -27,9 +26,10 @@
         
         <set name="students" table="cls_member" inverse="false">
             <key>
-                <column name="cls_id"/>
+                <column name="class"/>
             </key>
-            <many-to-many class="com.sickle.pojo.edu.Member" column="member_id"/>
+            <many-to-many class="com.sickle.pojo.edu.Member" column="student"/>
         </set>
+        
     </class>
 </hibernate-mapping>

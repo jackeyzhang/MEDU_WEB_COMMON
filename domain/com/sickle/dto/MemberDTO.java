@@ -27,21 +27,38 @@ public class MemberDTO
 			for ( Member stu : clss.getStudents( ) )
 			{
 				stu.setClasseses( new HashSet<Cls>(0) );
+				stu.setOpenclasseses(  new HashSet<Cls>(0)  );
 				stus.add( stu );
 			}
 			clss.setStudents( stus );
 			classes.add( clss );
 		}
 		member.setClasseses( classes );
+		
+		Set<Cls> opclasses = new HashSet<Cls>( 0 );
+		for ( Cls clss : member.getOpenclasseses( ))
+		{
+			Set<Member> stus = new HashSet<Member>( );
+			for ( Member stu : clss.getStudents( ) )
+			{
+				stu.setClasseses( new HashSet<Cls>(0) );
+				stu.setOpenclasseses(  new HashSet<Cls>(0)  );
+				stus.add( stu );
+			}
+			clss.setStudents( stus );
+			classes.add( clss );
+		}
+		member.setOpenclasseses( opclasses );
+		
 		return member;
 	}
 
-	public List<Member> to( List<Member> teachers )
+	public List<Member> to( List<Member> members )
 	{
-		for ( Member teacher : teachers )
+		for ( Member teacher : members )
 		{
 			to( teacher );
 		}
-		return teachers;
+		return members;
 	}
 }

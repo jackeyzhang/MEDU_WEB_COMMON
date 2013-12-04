@@ -7,8 +7,10 @@ package com.sickle.dao.test;
 
 
 import com.sickle.dao.ClsDaoService;
+import com.sickle.dao.MemberDaoService;
 import com.sickle.pojo.edu.Cls;
 import com.sickle.pojo.edu.Member;
+import com.sickle.service.itf.IMemberService;
 
 /**
  * 清掉所有表
@@ -97,7 +99,7 @@ public class TestDaoService
 		
 		ClsDaoService clsdao = new ClsDaoService();
 		
-		Cls cl = new Cls();
+/*		Cls cl = new Cls();
 		cl.setName( "周三语文课" );
 		cl.setClasstime( "时间描述" );
 		cl.setContact( "362365332" );
@@ -115,8 +117,16 @@ public class TestDaoService
 		
 		cl.getStudents( ).add( member );
 		
-		clsdao.addCls( cl );
+		clsdao.addCls( cl );*/
 		
+		IMemberService mservice = new MemberDaoService();
+		
+		Member m = mservice.getMemberById( 94 );
+		for(Cls c : m.getOpenclasseses( ))
+		{
+			System.out.println(c.getName( ));
+		}
+			
 	}
 
 }

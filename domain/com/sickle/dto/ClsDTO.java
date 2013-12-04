@@ -32,6 +32,14 @@ public class ClsDTO
 			}
 			stu.setClasseses( clss );
 			
+			Set<Cls> opclss = new HashSet<Cls>();
+			for( Cls stucls : stu.getOpenclasseses( ) )
+			{
+				stucls.setStudents( new HashSet<Member>(0) );
+				opclss.add( stucls );
+			}
+			stu.setOpenclasseses( opclss );
+			
 			stus.add( stu );
 		}
 		classes.setStudents( stus );

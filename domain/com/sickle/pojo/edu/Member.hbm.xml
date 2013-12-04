@@ -57,9 +57,16 @@
         
         <set name="classeses" table="cls_member" inverse="true">
             <key>
-                <column name="member_id" />
+                <column name="student" />
             </key>
-            <many-to-many class="com.sickle.pojo.edu.Cls"  column="cls_id"/>
+            <many-to-many class="com.sickle.pojo.edu.Cls"  column="class"/>
+        </set>
+        
+        <set name="openclasseses">
+            <key>
+                <column name="createmember" />
+            </key>
+            <one-to-many class="com.sickle.pojo.edu.Cls"/>
         </set>
     </class>
 </hibernate-mapping>
