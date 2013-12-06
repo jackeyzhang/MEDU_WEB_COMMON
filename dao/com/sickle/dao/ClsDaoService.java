@@ -9,6 +9,7 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 
 import com.sickle.dao.support.HibernateSupport;
+import com.sickle.exception.NotExistException;
 import com.sickle.pojo.edu.Cls;
 import com.sickle.pojo.edu.Member;
 import com.sickle.service.itf.IClsService;
@@ -53,6 +54,8 @@ public class ClsDaoService extends HibernateSupport<Cls> implements IClsService
 		Cls classes = getClassById( classesid );
 		try
 		{
+			classes.setStudents(null);
+			classes.setCreatedmember(null);
 			delete( classes );
 		}catch(Exception e)
 		{
@@ -100,7 +103,7 @@ public class ClsDaoService extends HibernateSupport<Cls> implements IClsService
 	}
 
 	@Override
-	public Cls addCls( int memberid, Cls clses )
+	public Cls addCls( int memberid, Cls clses ) throws NotExistException
 	{
 		Session session = getSession( );
 		session.beginTransaction();
@@ -108,10 +111,10 @@ public class ClsDaoService extends HibernateSupport<Cls> implements IClsService
 		query.setInteger( 0, memberid );
 		if(query.list( ) == null || query.list( ).size( ) == 0 )
 		{
-			return null;
+			throw new NotExistException();
 		}
 		Member member = (Member) query.list( ).get( 0 );
-		clses.setCreateMember( member );
+		clses.setCreatedmember(member);
 		session.save( clses );
 		session.getTransaction().commit();
 		session.close();

@@ -30,7 +30,7 @@ public class Cls implements java.io.Serializable
 	@Reflect_Field(index=5,title="授课地址")
 	private String classaddress;
 	
-	private Member createMember;
+	private Member createdmember;
 	
 	private Set<Member> students = new HashSet<Member>( 0 );
 
@@ -227,22 +227,12 @@ public class Cls implements java.io.Serializable
 				+ students + "]";
 	}
 
-	
-	/**
-	 * @return the createMember
-	 */
-	public Member getCreateMember( )
-	{
-		return createMember;
+	public Member getCreatedmember() {
+		return createdmember;
 	}
 
-	
-	/**
-	 * @param createMember the createMember to set
-	 */
-	public void setCreateMember( Member createMember )
-	{
-		this.createMember = createMember;
+	public void setCreatedmember(Member createdmember) {
+		this.createdmember = createdmember;
 	}
 	
 	

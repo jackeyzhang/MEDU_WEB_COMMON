@@ -58,7 +58,7 @@ public class Member implements java.io.Serializable
 	@Reflect_Field(title="级别",type=FieldType.Float,mask=14)
 	private Float grade;
 	
-	private Set<Cls> classeses = new HashSet<Cls>( 0 );
+	private Set<Cls> inclasseses = new HashSet<Cls>( 0 );
 	
 	private Set<Cls> openclasseses = new HashSet<Cls>( 0 );
 
@@ -76,7 +76,7 @@ public class Member implements java.io.Serializable
 	public Member( String name, String sex, String hobby, String contact,
 			String email, Float grade, Integer openStatus,
 			String password, String resume,String orgname,
-			String title,Set<Cls> classeses )
+			String title,Set<Cls> inclasseses )
 	{
 		this.name = name;
 		this.sex = sex;
@@ -89,7 +89,7 @@ public class Member implements java.io.Serializable
 		this.resume = resume;
 		this.orgname = orgname;
 		this.title = title;
-		this.classeses = classeses;
+		this.inclasseses = inclasseses;
 	}
 
 	public Integer getId( )
@@ -186,18 +186,18 @@ public class Member implements java.io.Serializable
 	/**
 	 * @return the classeses
 	 */
-	public Set<Cls> getClasseses( )
+	public Set<Cls> getInclasseses( )
 	{
-		return classeses;
+		return inclasseses;
 	}
 
 	
 	/**
 	 * @param classeses the classeses to set
 	 */
-	public void setClasseses( Set<Cls> classeses )
+	public void setInclasseses( Set<Cls> inclasseses )
 	{
-		this.classeses = classeses;
+		this.inclasseses = inclasseses;
 	}
 
 	/**

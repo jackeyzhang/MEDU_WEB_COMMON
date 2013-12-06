@@ -9,6 +9,7 @@ package com.sickle.dao.test;
 import com.sickle.dao.ClsDaoService;
 import com.sickle.exception.CodeException;
 import com.sickle.pojo.edu.Cls;
+import com.sickle.pojo.edu.Member;
 
 /**
  * 清掉所有表
@@ -97,13 +98,17 @@ public class TestDaoService
 //		s.addMessage( message );
 		
 		ClsDaoService clsdao = new ClsDaoService();
+		Cls cl = clsdao.getClassById(9);
+		System.out.println(cl);
+		/*for(Member m : cl.getStudents())
+		System.out.println(m.getName());*/
 		
-		Cls cl = new Cls();
-		cl.setName( "周三语文课2" );
-		cl.setClasstime( "时间描述" );
-		cl.setContact( "362365332" );
-		cl.setTeachername( "张老师" );
-		cl.setClassaddress( "浦东新区张杨路123号" );
+//		Cls cl = new Cls();
+//		cl.setName( "周三语文课2" );
+//		cl.setClasstime( "时间描述" );
+//		cl.setContact( "362365332" );
+//		cl.setTeachername( "张老师" );
+//		cl.setClassaddress( "浦东新区张杨路123号" );
 		
 //		Member member = new Member();
 //		member.setName( "魏斌斌" );
@@ -116,7 +121,7 @@ public class TestDaoService
 		
 //		cl.getStudents( ).add( member );
 		
-		clsdao.addCls( 94 , cl );
+//		clsdao.addCls( 94 , cl );
 		
 			
 	}

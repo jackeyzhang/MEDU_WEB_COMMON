@@ -25,12 +25,12 @@ public class ClsDTO
 		for ( Member stu : classes.getStudents( ) )
 		{
 			Set<Cls> clss = new HashSet<Cls>();
-			for( Cls stucls : stu.getClasseses( ) )
+			for( Cls stucls : stu.getInclasseses( ) )
 			{
 				stucls.setStudents( new HashSet<Member>(0) );
 				clss.add( stucls );
 			}
-			stu.setClasseses( clss );
+			stu.setInclasseses( clss );
 			
 			Set<Cls> opclss = new HashSet<Cls>();
 			for( Cls stucls : stu.getOpenclasseses( ) )
@@ -44,8 +44,11 @@ public class ClsDTO
 		}
 		classes.setStudents( stus );
 		
-		Member member = classes.getCreateMember( );
-		classes.setCreateMember( new MemberDTO( ).to(member) );
+		Member mem = classes.getCreatedmember();
+		if( mem != null )
+		{
+			classes.setCreatedmember(new MemberDTO().to(mem));
+		}
 		return classes;
 	}
 

@@ -21,19 +21,19 @@ public class MemberDTO
 	public Member to( Member member )
 	{
 		Set<Cls> classes = new HashSet<Cls>( 0 );
-		for ( Cls clss : member.getClasseses( ) )
+		for ( Cls clss : member.getInclasseses( ) )
 		{
 			Set<Member> stus = new HashSet<Member>( );
 			for ( Member stu : clss.getStudents( ) )
 			{
-				stu.setClasseses( new HashSet<Cls>(0) );
+				stu.setInclasseses( new HashSet<Cls>(0) );
 				stu.setOpenclasseses(  new HashSet<Cls>(0)  );
 				stus.add( stu );
 			}
 			clss.setStudents( stus );
 			classes.add( clss );
 		}
-		member.setClasseses( classes );
+		member.setInclasseses( classes );
 		
 		Set<Cls> opclasses = new HashSet<Cls>( 0 );
 		for ( Cls clss : member.getOpenclasseses( ))
@@ -41,7 +41,7 @@ public class MemberDTO
 			Set<Member> stus = new HashSet<Member>( );
 			for ( Member stu : clss.getStudents( ) )
 			{
-				stu.setClasseses( new HashSet<Cls>(0) );
+				stu.setInclasseses( new HashSet<Cls>(0) );
 				stu.setOpenclasseses(  new HashSet<Cls>(0)  );
 				stus.add( stu );
 			}

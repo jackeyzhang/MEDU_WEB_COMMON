@@ -2,6 +2,7 @@ package com.sickle.service.itf;
 
 import java.util.List;
 
+import com.sickle.exception.NotExistException;
 import com.sickle.pojo.edu.Cls;
 
 /**
@@ -40,8 +41,9 @@ public interface IClsService
 	 * 
 	 * @param clses
 	 * @return
+	 * @throws NotExistException 
 	 */
-	Cls addCls(int memberid,Cls clses);
+	Cls addCls(int memberid,Cls clses) throws NotExistException;
 	
 	/**
 	 * 修改班级信息

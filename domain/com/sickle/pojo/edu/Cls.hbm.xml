@@ -24,13 +24,15 @@
             <column name="classaddress" length="145" />
         </property>
         
-        <set name="students" table="cls_member" inverse="false">
+        <many-to-one name="createdmember" class="com.sickle.pojo.edu.Member" column="createmember" lazy="false"></many-to-one>
+        
+        <set name="students" table="cls_member" inverse="false" lazy="false">
             <key>
                 <column name="class"/>
             </key>
             <many-to-many class="com.sickle.pojo.edu.Member" column="student"/>
         </set>
         
-        <many-to-one name="createMember" column="createMember" class="com.sickle.pojo.edu.Member" />
+          
     </class>
 </hibernate-mapping>
