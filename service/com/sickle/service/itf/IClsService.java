@@ -36,6 +36,14 @@ public interface IClsService
 	Cls addCls(Cls clses);
 	
 	/**
+	 * 增加班级信息
+	 * 
+	 * @param clses
+	 * @return
+	 */
+	Cls addCls(int memberid,Cls clses);
+	
+	/**
 	 * 修改班级信息
 	 * 
 	 * @param clses

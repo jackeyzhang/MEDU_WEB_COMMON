@@ -6,9 +6,11 @@ package com.sickle.dao;
 import java.util.List;
 
 import org.hibernate.Query;
+import org.hibernate.Session;
 
 import com.sickle.dao.support.HibernateSupport;
 import com.sickle.pojo.edu.Cls;
+import com.sickle.pojo.edu.Member;
 import com.sickle.service.itf.IClsService;
 
 
@@ -95,6 +97,25 @@ public class ClsDaoService extends HibernateSupport<Cls> implements IClsService
 		query.setFirstResult(startindex);
 		query.setMaxResults(length);
 		return query.list( );
+	}
+
+	@Override
+	public Cls addCls( int memberid, Cls clses )
+	{
+		Session session = getSession( );
+		session.beginTransaction();
+		Query query = session.createQuery( "from Member where id = ? " );
+		query.setInteger( 0, memberid );
+		if(query.list( ) == null || query.list( ).size( ) == 0 )
+		{
+			return null;
+		}
+		Member member = (Member) query.list( ).get( 0 );
+		clses.setCreateMember( member );
+		session.save( clses );
+		session.getTransaction().commit();
+		session.close();
+		return clses;
 	}
 
 }

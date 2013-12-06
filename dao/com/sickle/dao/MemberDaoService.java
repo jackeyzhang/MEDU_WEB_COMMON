@@ -22,6 +22,7 @@ public class MemberDaoService extends HibernateSupport<Member> implements
 
 	@Override
 	public Member getMemberById(Integer id) {
+		
 		Query query = getSession().createQuery("from Member where id = ? ");
 		query.setInteger(0, id);
 		if (query.list() == null || query.list().size() == 0) {

@@ -43,6 +43,9 @@ public class ClsDTO
 			stus.add( stu );
 		}
 		classes.setStudents( stus );
+		
+		Member member = classes.getCreateMember( );
+		classes.setCreateMember( new MemberDTO( ).to(member) );
 		return classes;
 	}
 

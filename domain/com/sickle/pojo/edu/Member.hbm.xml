@@ -55,14 +55,14 @@
             <column name="area" length="20" />
         </property>
         
-        <set name="classeses" table="cls_member" inverse="true">
+        <set name="classeses" table="cls_member" inverse="true" lazy="false">
             <key>
                 <column name="student" />
             </key>
             <many-to-many class="com.sickle.pojo.edu.Cls"  column="class"/>
         </set>
         
-        <set name="openclasseses">
+        <set name="openclasseses" lazy="false">
             <key>
                 <column name="createmember" />
             </key>

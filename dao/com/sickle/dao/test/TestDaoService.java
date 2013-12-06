@@ -7,10 +7,8 @@ package com.sickle.dao.test;
 
 
 import com.sickle.dao.ClsDaoService;
-import com.sickle.dao.MemberDaoService;
+import com.sickle.exception.CodeException;
 import com.sickle.pojo.edu.Cls;
-import com.sickle.pojo.edu.Member;
-import com.sickle.service.itf.IMemberService;
 
 /**
  * 清掉所有表
@@ -23,8 +21,9 @@ public class TestDaoService
 
 	/**
 	 * @param args
+	 * @throws CodeException 
 	 */
-	public static void main( String[] args )
+	public static void main( String[] args ) throws CodeException
 	{
 		/*OrgDaoService oservice = new OrgDaoService( );
 		SchoolDaoService sservice = new SchoolDaoService( );
@@ -99,33 +98,26 @@ public class TestDaoService
 		
 		ClsDaoService clsdao = new ClsDaoService();
 		
-/*		Cls cl = new Cls();
-		cl.setName( "周三语文课" );
+		Cls cl = new Cls();
+		cl.setName( "周三语文课2" );
 		cl.setClasstime( "时间描述" );
 		cl.setContact( "362365332" );
 		cl.setTeachername( "张老师" );
 		cl.setClassaddress( "浦东新区张杨路123号" );
 		
-		Member member = new Member();
-		member.setName( "魏斌斌" );
-		member.setCity( "上海" );
-		member.setEmail( "zhangchenhao@139.com" );
-		member.setTitle( "学生" );
-		member.setPassword( "123" );
-		member.setResume( "resume" );
-		member.setOrgname( "orgname" );
+//		Member member = new Member();
+//		member.setName( "魏斌斌" );
+//		member.setCity( "上海" );
+//		member.setEmail( "zhangchenhao@139.com" );
+//		member.setTitle( "学生" );
+//		member.setPassword( "123" );
+//		member.setResume( "resume" );
+//		member.setOrgname( "orgname" );
 		
-		cl.getStudents( ).add( member );
+//		cl.getStudents( ).add( member );
 		
-		clsdao.addCls( cl );*/
+		clsdao.addCls( 94 , cl );
 		
-		IMemberService mservice = new MemberDaoService();
-		
-		Member m = mservice.getMemberById( 94 );
-		for(Cls c : m.getOpenclasseses( ))
-		{
-			System.out.println(c.getName( ));
-		}
 			
 	}
 
