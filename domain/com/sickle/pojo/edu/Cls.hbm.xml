@@ -24,7 +24,7 @@
             <column name="classaddress" length="145" />
         </property>
         
-        <set name="students" table="cls_member" inverse="false" lazy="false">
+        <set name="students" table="cls_member" inverse="false">
             <key>
                 <column name="class"/>
             </key>
