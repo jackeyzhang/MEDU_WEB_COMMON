@@ -46,7 +46,7 @@ public class MemberDTO
 				stus.add( stu );
 			}
 			clss.setStudents( stus );
-			classes.add( clss );
+			opclasses.add( clss );
 		}
 		member.setOpenclasseses( opclasses );
 		

@@ -100,8 +100,8 @@ public class TestDaoService
 		ClsDaoService clsdao = new ClsDaoService();
 		Cls cl = clsdao.getClassById(9);
 		System.out.println(cl);
-		/*for(Member m : cl.getStudents())
-		System.out.println(m.getName());*/
+		for(Member m : cl.getStudents())
+		System.out.println(m.getName());
 		
 //		Cls cl = new Cls();
 //		cl.setName( "周三语文课2" );
