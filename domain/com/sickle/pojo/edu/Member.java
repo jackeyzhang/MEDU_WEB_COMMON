@@ -58,8 +58,6 @@ public class Member implements java.io.Serializable
 	@Reflect_Field(title="级别",type=FieldType.Float,mask=14)
 	private Float grade;
 	
-	private Set<Cls> inclasseses = new HashSet<Cls>( 0 );
-	
 	private Set<Cls> openclasseses = new HashSet<Cls>( 0 );
 
 	public Member( )
@@ -76,7 +74,7 @@ public class Member implements java.io.Serializable
 	public Member( String name, String sex, String hobby, String contact,
 			String email, Float grade, Integer openStatus,
 			String password, String resume,String orgname,
-			String title,Set<Cls> inclasseses )
+			String title)
 	{
 		this.name = name;
 		this.sex = sex;
@@ -89,7 +87,6 @@ public class Member implements java.io.Serializable
 		this.resume = resume;
 		this.orgname = orgname;
 		this.title = title;
-		this.inclasseses = inclasseses;
 	}
 
 	public Integer getId( )
@@ -180,24 +177,6 @@ public class Member implements java.io.Serializable
 	public void setPassword( String password )
 	{
 		this.password = password;
-	}
-	
-	
-	/**
-	 * @return the classeses
-	 */
-	public Set<Cls> getInclasseses( )
-	{
-		return inclasseses;
-	}
-
-	
-	/**
-	 * @param classeses the classeses to set
-	 */
-	public void setInclasseses( Set<Cls> inclasseses )
-	{
-		this.inclasseses = inclasseses;
 	}
 
 	/**
@@ -347,6 +326,22 @@ public class Member implements java.io.Serializable
 	public void setOpenclasseses( Set<Cls> openclasseses )
 	{
 		this.openclasseses = openclasseses;
+	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString( )
+	{
+		return "Member [id=" + id + ", name=" + name + ", icon=" + icon
+				+ ", sex=" + sex + ", email=" + email + ", password="
+				+ password + ", hobby=" + hobby + ", character=" + character
+				+ ", contact=" + contact + ", resume=" + resume + ", orgname="
+				+ orgname + ", title=" + title + ", city=" + city + ", area="
+				+ area + ", openStatus=" + openStatus + ", grade=" + grade
+				+ ", openclasseses="
+				+ openclasseses + "]";
 	}
 
 	

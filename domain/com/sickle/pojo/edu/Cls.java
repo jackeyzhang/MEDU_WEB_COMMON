@@ -30,9 +30,9 @@ public class Cls implements java.io.Serializable
 	@Reflect_Field(index=5,title="授课地址")
 	private String classaddress;
 	
-	private Member createdmember;
+	private Member teacher;
 	
-	private Set<Member> students = new HashSet<Member>( 0 );
+	private Set<Student> students = new HashSet<Student>( 0 );
 
 	public Cls( )
 	{
@@ -77,7 +77,7 @@ public class Cls implements java.io.Serializable
 	 * @param students
 	 */
 	public Cls( Integer id, String name, String teachername, String contact,
-			String classtime, String classaddress, Set<Member> students )
+			String classtime, String classaddress, Set<Student> students )
 	{
 		super( );
 		this.id = id;
@@ -201,7 +201,7 @@ public class Cls implements java.io.Serializable
 	/**
 	 * @return the students
 	 */
-	public Set<Member> getStudents( )
+	public Set<Student> getStudents( )
 	{
 		return students;
 	}
@@ -210,7 +210,7 @@ public class Cls implements java.io.Serializable
 	/**
 	 * @param students the students to set
 	 */
-	public void setStudents( Set<Member> students )
+	public void setStudents( Set<Student> students )
 	{
 		this.students = students;
 	}
@@ -227,13 +227,27 @@ public class Cls implements java.io.Serializable
 				+ students + "]";
 	}
 
-	public Member getCreatedmember() {
-		return createdmember;
+	public Member getTeacher() {
+		return teacher;
 	}
 
-	public void setCreatedmember(Member createdmember) {
-		this.createdmember = createdmember;
+	public void setTeacher(Member teacher) {
+		this.teacher = teacher;
 	}
 	
-	
+	public void removeStudent(Student stu)
+	{
+		Student removeone = null;
+		for(Student s : getStudents( ))
+		{
+			if(s.getId( ).equals(stu.getId( )))
+			{
+				removeone = s;
+			}
+		}
+		if( null != removeone )
+		{
+			students.remove( removeone );
+		}
+	}
 }

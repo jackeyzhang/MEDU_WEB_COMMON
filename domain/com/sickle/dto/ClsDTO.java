@@ -10,6 +10,7 @@ import java.util.Set;
 
 import com.sickle.pojo.edu.Cls;
 import com.sickle.pojo.edu.Member;
+import com.sickle.pojo.edu.Student;
 
 /**
  * @author chenhao
@@ -20,34 +21,26 @@ public class ClsDTO
 
 	public Cls to( Cls classes )
 	{
-		Set<Member> stus = new HashSet<Member>( );
+		Set<Student> stus = new HashSet<Student>( );
 	
-		for ( Member stu : classes.getStudents( ) )
+		for ( Student stu : classes.getStudents( ) )
 		{
-			Set<Cls> clss = new HashSet<Cls>();
-			for( Cls stucls : stu.getInclasseses( ) )
-			{
-				stucls.setStudents( new HashSet<Member>(0) );
-				clss.add( stucls );
-			}
-			stu.setInclasseses( clss );
-			
 			Set<Cls> opclss = new HashSet<Cls>();
-			for( Cls stucls : stu.getOpenclasseses( ) )
+			for( Cls stucls : stu.getClses( ) )
 			{
-				stucls.setStudents( new HashSet<Member>(0) );
+				stucls.setStudents( new HashSet<Student>(0) );
 				opclss.add( stucls );
 			}
-			stu.setOpenclasseses( opclss );
+			stu.setClses( opclss );
 			
 			stus.add( stu );
 		}
 		classes.setStudents( stus );
 		
-		Member mem = classes.getCreatedmember();
+		Member mem = classes.getTeacher();
 		if( mem != null )
 		{
-			classes.setCreatedmember(new MemberDTO().to(mem));
+			classes.setTeacher(new MemberDTO().to(mem));
 		}
 		return classes;
 	}

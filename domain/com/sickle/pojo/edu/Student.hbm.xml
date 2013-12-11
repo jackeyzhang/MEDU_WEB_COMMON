@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2013-7-15 16:44:17 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+	<class name="com.sickle.pojo.edu.Student" table="student" catalog="medu">
+		<id name="id" type="java.lang.Integer">
+			<column name="id" />
+			<generator class="identity" />
+		</id>
+		<property name="name" type="string">
+			<column name="name" length="45" not-null="true" />
+		</property>
+		<property name="password" type="string">
+			<column name="password" length="45" not-null="true" />
+		</property>
+		<property name="email" type="string">
+			<column name="email" length="45" not-null="true" />
+		</property>
+		<property name="icon" type="string">
+			<column name="icon" length="45" />
+		</property>
+		<property name="birthday" type="date">
+			<column name="birthday" sql-type="datetime" />
+		</property>
+		<property name="sex" type="string">
+			<column name="sex" length="4" />
+		</property>
+		<property name="hobby" type="string">
+			<column name="hobby" length="200" />
+		</property>
+		<property name="contact" type="string">
+			<column name="contact" length="45" />
+		</property>
+		<property name="parents" type="string">
+			<column name="parents" length="150" />
+		</property>
+		<property name="detail1" type="string">
+			<column name="detail1" length="500" />
+		</property>
+		<property name="detail2" type="string">
+			<column name="detail2" length="500" />
+		</property>
+		<property name="detail3" type="string">
+			<column name="detail3" length="500" />
+		</property>
+		<property name="detail4" type="string">
+			<column name="detail4" length="500" />
+		</property>
+		<property name="detail5" type="string">
+			<column name="detail5" length="500" />
+		</property>
+		<property name="detail6" type="string">
+			<column name="detail6" length="500" />
+		</property>
+		
+		 <set name="clses" table="cls_student" inverse="true" lazy="false">
+            <key>
+                <column name="studentid"/>
+            </key>
+            <many-to-many class="com.sickle.pojo.edu.Cls" column="classid"/>
+        </set>
+        
+	</class>
+</hibernate-mapping>

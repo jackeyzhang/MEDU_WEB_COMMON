@@ -9,20 +9,19 @@ import java.util.List;
 import java.util.Set;
 
 import com.sickle.pojo.edu.Cls;
-import com.sickle.pojo.edu.Member;
 import com.sickle.pojo.edu.Student;
 
 /**
  * @author chenhao
  * 
  */
-public class MemberDTO
+public class StudentDTO
 {
 
-	public Member to( Member member )
+	public Student to( Student student )
 	{
 		Set<Cls> opclasses = new HashSet<Cls>( 0 );
-		for ( Cls clss : member.getOpenclasseses( ))
+		for ( Cls clss : student.getClses( ))
 		{
 			Set<Student> stus = new HashSet<Student>( );
 			for ( Student stu : clss.getStudents( ) )
@@ -33,17 +32,17 @@ public class MemberDTO
 			clss.setStudents( stus );
 			opclasses.add( clss );
 		}
-		member.setOpenclasseses( opclasses );
+		student.setClses( opclasses );
 		
-		return member;
+		return student;
 	}
 
-	public List<Member> to( List<Member> members )
+	public List<Student> to( List<Student> students )
 	{
-		for ( Member teacher : members )
+		for ( Student stu : students )
 		{
-			to( teacher );
+			to( stu );
 		}
-		return members;
+		return students;
 	}
 }

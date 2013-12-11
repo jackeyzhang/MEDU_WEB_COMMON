@@ -55,16 +55,9 @@
             <column name="area" length="20" />
         </property>
         
-        <set name="inclasseses" table="cls_member" inverse="true" cascade="none" lazy="false">
+        <set name="openclasseses" inverse="true" lazy="false">
             <key>
-                <column name="student" />
-            </key>
-            <many-to-many class="com.sickle.pojo.edu.Cls"  column="class"/>
-        </set>
-        
-        <set name="openclasseses" inverse="true" cascade="none" lazy="false">
-            <key>
-                <column name="createmember" />
+                <column name="teacherid" />
             </key>
             <one-to-many class="com.sickle.pojo.edu.Cls"/>
         </set>

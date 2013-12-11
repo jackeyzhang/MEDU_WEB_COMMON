@@ -24,16 +24,19 @@ import com.sickle.service.itf.IClsService;
 public class ClsDaoService extends HibernateSupport<Cls> implements IClsService
 {
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public Cls getClassById( Integer id )
 	{
-		Query query = getSession( ).createQuery( "from Cls where id = ? " );
-		query.setInteger( 0, id );
-		if(query.list( ) == null || query.list( ).size( ) == 0 )
-		{
+		Session session = getSession();
+		Query query = session.createQuery("from Cls where id = ? ");
+		query.setInteger(0, id);
+		List<Cls> li = query.list();
+		if (li == null || li.size() == 0) {
 			return null;
 		}
-		return (Cls)query.list( ).get( 0 );
+		session.close( );
+		return li.get(0);
 	}
 
 	@Override
@@ -45,7 +48,7 @@ public class ClsDaoService extends HibernateSupport<Cls> implements IClsService
 	@Override
 	public Cls modifyCls( Cls classes )
 	{
-		return this.update( classes );
+		return this.saveorupdate( classes );
 	}
 
 	@Override
@@ -54,8 +57,6 @@ public class ClsDaoService extends HibernateSupport<Cls> implements IClsService
 		Cls classes = getClassById( classesid );
 		try
 		{
-			classes.setStudents(null);
-			classes.setCreatedmember(null);
 			delete( classes );
 		}catch(Exception e)
 		{
@@ -79,16 +80,19 @@ public class ClsDaoService extends HibernateSupport<Cls> implements IClsService
 	}
 
 	
+	@SuppressWarnings("unchecked")
 	@Override
 	public Cls getClassByName( String name )
 	{
-		Query query = getSession( ).createQuery( "from Cls where name = ? " );
-		query.setString( 0, name );
-		if(query.list( ) == null || query.list( ).size( ) == 0 )
-		{
+		Session session = getSession();
+		Query query = session.createQuery("from Cls where name = ? ");
+		query.setString(0, name);
+		List<Cls> li = query.list();
+		if (li == null || li.size() == 0) {
 			return null;
 		}
-		return (Cls)query.list( ).get( 0 );
+		session.close( );
+		return li.get(0);
 	}
 
 	@SuppressWarnings("unchecked")
@@ -96,10 +100,16 @@ public class ClsDaoService extends HibernateSupport<Cls> implements IClsService
 	public List<Cls> listCls( int startindex, int length )
 			throws Exception
 	{
-		Query query = getSession( ).createQuery( "from Cls " );
+		Session session = getSession();
+		Query query = session.createQuery("from Cls");
 		query.setFirstResult(startindex);
 		query.setMaxResults(length);
-		return query.list( );
+		List<Cls> li = query.list();
+		if (li == null || li.size() == 0) {
+			return null;
+		}
+		session.close( );
+		return li;
 	}
 
 	@Override
@@ -114,7 +124,7 @@ public class ClsDaoService extends HibernateSupport<Cls> implements IClsService
 			throw new NotExistException();
 		}
 		Member member = (Member) query.list( ).get( 0 );
-		clses.setCreatedmember(member);
+		clses.setTeacher(member);
 		session.save( clses );
 		session.getTransaction().commit();
 		session.close();

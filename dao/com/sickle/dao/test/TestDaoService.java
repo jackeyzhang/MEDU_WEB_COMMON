@@ -9,7 +9,6 @@ package com.sickle.dao.test;
 import com.sickle.dao.ClsDaoService;
 import com.sickle.exception.CodeException;
 import com.sickle.pojo.edu.Cls;
-import com.sickle.pojo.edu.Member;
 
 /**
  * 清掉所有表
@@ -98,10 +97,8 @@ public class TestDaoService
 //		s.addMessage( message );
 		
 		ClsDaoService clsdao = new ClsDaoService();
-		Cls cl = clsdao.getClassById(9);
+		Cls cl = clsdao.getClassById(31);
 		System.out.println(cl);
-		for(Member m : cl.getStudents())
-		System.out.println(m.getName());
 		
 //		Cls cl = new Cls();
 //		cl.setName( "周三语文课2" );
