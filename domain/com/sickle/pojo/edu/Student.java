@@ -26,7 +26,7 @@ public class Student implements java.io.Serializable
 	@Reflect_Field(index=1,title="头像",reqiured = true,mask=14)
 	private String icon;
 	
-	@Reflect_Field(title="出生日期",type=FieldType.DateTime)
+	@Reflect_Field(title="出生日期",type=FieldType.Date)
 	private Date birthday;
 	
 	@Reflect_Field(index=2,title="性别",reqiured = true)
