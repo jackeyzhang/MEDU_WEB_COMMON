@@ -41,22 +41,22 @@ public class Student implements java.io.Serializable
 	@Reflect_Field(title="父母")
 	private String parents;
 	
-	@Reflect_Field(title="城市")
+	@Reflect_Field(title="备注1")
 	private String detail1;
 	
-	@Reflect_Field(title="区域")
+	@Reflect_Field(title="备注2")
 	private String detail2;
 	
-	@Reflect_Field(title="城市")
+	@Reflect_Field(title="备注3")
 	private String detail3;
 	
-	@Reflect_Field(title="区域")
+	@Reflect_Field(title="备注4")
 	private String detail4;
 	
-	@Reflect_Field(title="城市")
+	@Reflect_Field(title="备注5")
 	private String detail5;
 	
-	@Reflect_Field(title="区域")
+	@Reflect_Field(title="备注6")
 	private String detail6;
 	
 	

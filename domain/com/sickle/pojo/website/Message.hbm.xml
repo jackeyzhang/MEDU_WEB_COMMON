@@ -17,8 +17,8 @@
         <property name="hasread" type="string">
             <column name="hasread" length="2" />
         </property>
-        <property name="receivetime" type="date">
-            <column name="receivetime" sql-type="datetime"/>
+        <property name="receivetime" type="java.util.Date">
+            <column name="receivetime" sql-type="calendar"/>
         </property>
         <property name="content" type="string">
             <column name="content" length="4500" />

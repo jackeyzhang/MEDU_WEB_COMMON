@@ -18,13 +18,13 @@ public class Message implements java.io.Serializable
 	@Reflect_Field(type = FieldType.Long,isId = true)
 	private Long id;
 	
-	@Reflect_Field(title="发信人",type=FieldType.Integer,mask= 1)
+	@Reflect_Field(title="发信人",type=FieldType.Integer,mask= 0)
 	private int send;
 	
-	@Reflect_Field(title="收信人",type=FieldType.Integer,mask= 1 )
+	@Reflect_Field(title="收信人",type=FieldType.Integer,mask= 0 )
 	private int receiver;
 	
-	@Reflect_Field(title="是否已读",mask= 1)
+	@Reflect_Field(title="是否已读",mask= 0)
 	private String hasread;
 	
 	@Reflect_Field(title="接收时间",type=FieldType.DateTime,mask= 1)
@@ -33,10 +33,10 @@ public class Message implements java.io.Serializable
 	@Reflect_Field(index=1,title="内容",type=FieldType.TextArea)
 	private String content;
 	
-	@Reflect_Field(index=0,title="标题",mask= 15)
+	@Reflect_Field(index=0,title="标题",mask= 0)
 	private String title;
 	
-	@Reflect_Field(title="类型",mask= 1)
+	@Reflect_Field(title="类型",mask= 0)
 	private String type;
 
 	public Message( )
