@@ -110,4 +110,17 @@ public class MemberDaoService extends HibernateSupport<Member> implements
 		return ls;
 	}
 
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Member> getMembersById( List<Integer> ids )
+	{
+		Query query = getSession().createQuery("from Member where id in (:ids) ");
+		query.setParameterList( "ids", ids );
+		List<Member> list = query.list();
+		if ( list == null || list.size( ) == 0) {
+			return null;
+		}
+		return list;
+	}
+
 }

@@ -21,7 +21,7 @@
             <column name="receivetime" sql-type="calendar"/>
         </property>
         <property name="content" type="string">
-            <column name="content" length="4500" />
+            <column name="content" length="500" />
         </property>
         <property name="title" type="string">
             <column name="title" length="100" />

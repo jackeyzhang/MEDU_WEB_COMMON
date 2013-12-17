@@ -26,6 +26,14 @@ public interface IMemberService
 	Member getMemberById(Integer id);
 	
 	/**
+	 * 根据id获取member对象
+	 * 
+	 * @param id
+	 * @return
+	 */
+	List<Member> getMembersById(List<Integer> id);
+	
+	/**
 	 * 根据登录名/昵称获取到member对象
 	 * 
 	 * @param loginName

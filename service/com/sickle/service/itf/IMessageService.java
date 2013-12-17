@@ -29,6 +29,16 @@ public interface IMessageService
 	List<Message> getMessageByUserId(Integer userid);
 	
 	/**
+	 * 根据用户ID获取消息对象
+	 * 
+	 * @param sendid
+	 * @param recevireid
+	 * @param type 0 单向 1 逆向 2 双向
+	 * @return
+	 */
+	List<Message> getMessageBySendAndRecevie(Integer sendid,Integer recevireid,Integer type);
+	
+	/**
 	 * 增加消息信息
 	 * 
 	 * @param Message
