@@ -23,5 +23,6 @@
   
   <mapping resource="com/sickle/pojo/website/Message.hbm.xml"/>
   <mapping resource="com/sickle/pojo/website/WebUi.hbm.xml"/>
+  <mapping resource="com/sickle/pojo/website/Evaluate.hbm.xml"/>
  </session-factory>
 </hibernate-configuration>

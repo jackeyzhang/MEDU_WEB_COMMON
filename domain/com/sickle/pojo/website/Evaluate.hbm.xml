@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2013-8-14 16:00:11 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sickle.pojo.website.Evaluate" table="evaluate" catalog="medu">
+        <id name="id" type="java.lang.Long">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="send" type="java.lang.Integer">
+            <column name="send" not-null="true" />
+        </property>
+        <property name="org" type="java.lang.Integer">
+            <column name="org" not-null="true" />
+        </property>
+        <property name="receivetime" type="java.util.Date">
+            <column name="receivetime" sql-type="calendar"/>
+        </property>
+        <property name="content" type="string">
+            <column name="content" length="500" />
+        </property>
+        <property name="title" type="string">
+            <column name="title" length="100" />
+        </property>
+    </class>
+</hibernate-mapping>
